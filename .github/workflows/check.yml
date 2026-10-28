@@ -1,0 +1,25 @@
+name: Minimum-rival certificate checks
+on: [push, pull_request, workflow_dispatch]
+permissions:
+  contents: read
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      PYTHONDONTWRITEBYTECODE: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install -r requirements.txt
+      - run: python -B tools/manifest.py
+      - run: python -B tools/fetch_source.py
+      - run: nice -n 10 python -B checkers/verify.py --output work/checks/ci-smoke.json
+      - run: nice -n 10 python -B checkers/negative_controls.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: certificate-check-records
+          path: work/checks/

@@ -1,0 +1,12 @@
+{
+  "research_input_commit": "2ceb0de04c6cd68cfba7671a960bf35eef31e1e2",
+  "original_claims_sha256": "8544d96347d148a96f5b26918e7917bd8bba9ebb7d105db9b4920804744a5a94",
+  "independent_check_claims_input_identical": true,
+  "packaged_scientific_claim_fields_preserved": true,
+  "source_csv_sha256": "a06d6cc495c36c50b4292e260ebc89d54d3dbd422b99fd2ebfae66431ff59041",
+  "removed_field": "motif",
+  "added_fields": [
+    "row_number",
+    "motif_sha256"
+  ]
+}

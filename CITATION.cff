@@ -1,0 +1,92 @@
+{
+  "cff-version": "1.2.0",
+  "message": "Cite this draft and the original RNA-Undesign papers and data.",
+  "title": "Minimum rival covers for 108 RNA-Undesign motifs",
+  "type": "dataset",
+  "version": "0.0.0-draft",
+  "authors": [
+    {
+      "family-names": "Takimoto",
+      "given-names": "Tatsuhiko",
+      "affiliation": "Independent researcher"
+    }
+  ],
+  "license": [
+    "Apache-2.0",
+    "CC-BY-4.0"
+  ],
+  "references": [
+    {
+      "type": "generic",
+      "title": "RNA-Undesign fixed motif data",
+      "url": "https://github.com/shanry/RNA-Undesign/tree/8a8de22",
+      "commit": "8a8de22",
+      "authors": [
+        {
+          "name": "RNA-Undesign contributors"
+        }
+      ]
+    },
+    {
+      "type": "article",
+      "title": "Undesignable RNA Structure Identification via Rival Structure Generation and Structure Decomposition",
+      "url": "https://arxiv.org/abs/2311.08339",
+      "authors": [
+        {
+          "family-names": "Zhou",
+          "given-names": "Tianshuo"
+        },
+        {
+          "family-names": "Tang",
+          "given-names": "Wei Yu"
+        },
+        {
+          "family-names": "Mathews",
+          "given-names": "David H."
+        },
+        {
+          "family-names": "Huang",
+          "given-names": "Liang"
+        }
+      ]
+    },
+    {
+      "type": "article",
+      "title": "Scalable and Interpretable Identification of Minimal Undesignable RNA Structure Motifs with Rotational Invariance",
+      "url": "https://arxiv.org/abs/2402.17206",
+      "authors": [
+        {
+          "family-names": "Zhou",
+          "given-names": "Tianshuo"
+        },
+        {
+          "family-names": "Malik",
+          "given-names": "Apoorv"
+        },
+        {
+          "family-names": "Tang",
+          "given-names": "Wei Yu"
+        },
+        {
+          "family-names": "Mathews",
+          "given-names": "David H."
+        },
+        {
+          "family-names": "Huang",
+          "given-names": "Liang"
+        }
+      ]
+    },
+    {
+      "type": "article",
+      "title": "ViennaRNA Package 2.0",
+      "doi": "10.1186/1748-7188-6-26",
+      "authors": [
+        {
+          "family-names": "Lorenz",
+          "given-names": "R."
+        }
+      ]
+    }
+  ]
+}

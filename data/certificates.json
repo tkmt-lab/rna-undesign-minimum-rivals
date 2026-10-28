@@ -1,0 +1,1969 @@
+{
+  "schema": "rna-undesign-minimum-rivals.v0",
+  "source": {
+    "repository": "https://github.com/shanry/RNA-Undesign",
+    "commit": "8a8de22",
+    "path": "data/motifs_maxlen14_no_external/results.uniq.csv",
+    "sha256": "a06d6cc495c36c50b4292e260ebc89d54d3dbd422b99fd2ebfae66431ff59041",
+    "row_numbering": "1-based data rows, excluding the header"
+  },
+  "model": {
+    "backend": "ViennaRNA",
+    "version": "2.7.2",
+    "parameters": "Turner 2004",
+    "temperature": 37.0,
+    "dangles": 2,
+    "special_hp": 1,
+    "noLP": 0,
+    "noGU": 0,
+    "noGUclosure": 0,
+    "min_loop_size": 3,
+    "circ": 0,
+    "gquad": 0,
+    "logML": 0,
+    "salt": 1.021,
+    "energy_set": 0
+  },
+  "claims": [
+    {
+      "id": "m0025",
+      "claimed_minimum": 3,
+      "claimed_candidate_count": 64,
+      "claimed_sequence_count": 5308416,
+      "upper_rivals": [
+        "((*)(((...))).)",
+        "((*)..(....)..)",
+        "((*)..........)"
+      ],
+      "lower_witnesses": [
+        "GGAAACGUCCUCGGCAC",
+        "GGAAACGACCUCGGCAC",
+        "ACAAAGGAGGUUACCGU"
+      ],
+      "row_number": 25,
+      "motif_sha256": "b38030f89941d7855652b1c7f1566cd3b73ba95faf82245a45cb1e80fe68c508"
+    },
+    {
+      "id": "m0039",
+      "claimed_minimum": 4,
+      "claimed_candidate_count": 24,
+      "claimed_sequence_count": 124416,
+      "upper_rivals": [
+        "((((*).(*).)))",
+        "(..(*)((*).).)",
+        "((((*))(*)..))",
+        "(.((*).(*)..))"
+      ],
+      "lower_witnesses": [
+        "GUCGAAACCCAAAGCGGU",
+        "GACGAAACCCAAAGCGGC",
+        "GUCAAAAUGUAAAGUCGU",
+        "GCGAAAAUAUAAAGAUCC"
+      ],
+      "row_number": 39,
+      "motif_sha256": "00ed99bcaf88544f0768367957407603e147e36cd7d04f6a3cfeb832b54a9022"
+    },
+    {
+      "id": "m0044",
+      "claimed_minimum": 3,
+      "claimed_candidate_count": 56,
+      "claimed_sequence_count": 1990656,
+      "upper_rivals": [
+        "(((.(*)))...(*))",
+        "((..(*)..)..(*))",
+        "(...(*).....(*))"
+      ],
+      "lower_witnesses": [
+        "GGGUCAAAGCCCGAAAAAUC",
+        "UCCACAAAGGCGAAAAAAUA",
+        "ACCAUAAAGGCGCAAAAAUU",
+        "AGGUCAAAGCACAAAAAAUU"
+      ],
+      "row_number": 44,
+      "motif_sha256": "af15e6380503ded1b451886ea58b5c9efb57e8b6b3ea345f2e90d2a6d2439b91"
+    },
+    {
+      "id": "m0081",
+      "claimed_minimum": 4,
+      "claimed_candidate_count": 34,
+      "claimed_sequence_count": 82944,
+      "upper_rivals": [
+        "(.((.(*))).)",
+        "(..(.(*))..)",
+        "((.(.(*)).))",
+        "(....(*)...)"
+      ],
+      "lower_witnesses": [
+        "GCUCACAAAGGGUC",
+        "UCAGAGAAACCGAA",
+        "GGCGAAAAAUCCUC",
+        "GGCGAAAAAUCCAU"
+      ],
+      "row_number": 81,
+      "motif_sha256": "3bb0412d55d9dbd2c764a7a95e3f5a9855d6e924464ae8ebfd4e1b22816d6db8"
+    },
+    {
+      "id": "m0137",
+      "claimed_minimum": 2,
+      "claimed_candidate_count": 61,
+      "claimed_sequence_count": 3538944,
+      "upper_rivals": [
+        "((......(*).))",
+        "(.......(*)..)"
+      ],
+      "lower_witnesses": [
+        "GGGAAAACGAAACAUC",
+        "AAACAAAUAAAAUCCU"
+      ],
+      "row_number": 137,
+      "motif_sha256": "a6ff2756fed51d9b406f4ece7491eaede44e0d09dab420431275ec82f32a31a1"
+    },
+    {
+      "id": "m0139",
+      "claimed_minimum": 2,
+      "claimed_candidate_count": 159,
+      "claimed_sequence_count": 5308416,
+      "upper_rivals": [
+        "((..(*).....).)",
+        "(.(.(*)..)....)"
+      ],
+      "lower_witnesses": [
+        "UCCGUAAAGUAGAAGAA",
+        "GACGUAAAGUAGAAUAC"
+      ],
+      "row_number": 139,
+      "motif_sha256": "56af14a4bc02b4c760c6993d2c6b33a2e50d7270d7c483f267dd5afaa166a812"
+    },
+    {
+      "id": "m0144",
+      "claimed_minimum": 3,
+      "claimed_candidate_count": 40,
+      "claimed_sequence_count": 497664,
+      "upper_rivals": [
+        "(((*)).(*)....)",
+        "(((*)..(*)..).)",
+        "(.(*)(.(*))...)"
+      ],
+      "lower_witnesses": [
+        "UCAAAAUGCCAAAGCAGUA",
+        "GCAAAAUCAUAAAAGAGUC",
+        "GGGAAACGCCAAAGCACGC"
+      ],
+      "row_number": 144,
+      "motif_sha256": "81fc5b044eee6921a211325ecaa5839a0c8e80a7f19252606ac4d42e5c791289"
+    },
+    {
+      "id": "m0155",
+      "claimed_minimum": 1,
+      "claimed_candidate_count": 118,
+      "claimed_sequence_count": 5308416,
+      "upper_rivals": [
+        "(.......((*).))"
+      ],
+      "lower_witnesses": [
+        "GCCUCGGCUCAAAGUAC"
+      ],
+      "row_number": 155,
+      "motif_sha256": "551222844fad878051db874fdf62c3a5b0820ee373be8d40638fc3487bfd0f30"
+    },
+    {
+      "id": "m0208",
+      "claimed_minimum": 5,
+      "claimed_candidate_count": 273,
+      "claimed_sequence_count": 14155776,
+      "upper_rivals": [
+        "((.((...)).).)",
+        "((..(...)..).)",
+        "((.........).)",
+        "(...(....)...)",
+        "((.((....))).)"
+      ],
+      "lower_witnesses": [
+        "UCGCCCUCGGAGAA",
+        "UCGACCUCGGAGAA",
+        "UCGAGAAACCAGUA",
+        "ACAAGGAAACGGAU",
+        "UCAUGGAAACGGAA"
+      ],
+      "row_number": 208,
+      "motif_sha256": "10e253cfaa68ddcb0fc8aa4fd3f760020c3932ccf581fb45ff53e34fa8bf3b90"
+    },
+    {
+      "id": "m0215",
+      "claimed_minimum": 2,
+      "claimed_candidate_count": 118,
+      "claimed_sequence_count": 14155776,
+      "upper_rivals": [
+        "(.((*)).......)",
+        "(..(*)........)"
+      ],
+      "lower_witnesses": [
+        "CAUGAAACGGAAAACAG",
+        "ACCAAAAUACAAAAUAU"
+      ],
+      "row_number": 215,
+      "motif_sha256": "28ff8f73e64a11b54547d6989be47cf8c3c3dcba1c52953698262eebab6a1183"
+    },
+    {
+      "id": "m0232",
+      "claimed_minimum": 2,
+      "claimed_candidate_count": 273,
+      "claimed_sequence_count": 14155776,
+      "upper_rivals": [
+        "(............)",
+        "(((...)).....)"
+      ],
+      "lower_witnesses": [
+        "AGCCUCGGAAUCAU",
+        "GCCCUCGGAACGUC"
+      ],
+      "row_number": 232,
+      "motif_sha256": "3f96e266f7f5f7b170a5a55fe814afe8a60fc7f5e0ee225b73221b36beb71238"
+    },
+    {
+      "id": "m0237",
+      "claimed_minimum": 1,
+      "claimed_candidate_count": 273,
+      "claimed_sequence_count": 14155776,
+      "upper_rivals": [
+        "(....(....)..)"
+      ],
+      "lower_witnesses": [
+        "AGAAACAAAAGCAU"
+      ],
+      "row_number": 237,
+      "motif_sha256": "e91a60dcb83975737200dec62d39c384de9c864d0c037febb1d1bd4629e0b9a9"
+    },
+    {
+      "id": "m0254",
+      "claimed_minimum": 2,
+      "claimed_candidate_count": 92,
+      "claimed_sequence_count": 1327104,
+      "upper_rivals": [
+        "((.((*))....))",
+        "(..((*)).....)"
+      ],
+      "lower_witnesses": [
+        "GUCGCAAAGUAAAAGC",
+        "ACAGAAAAUCAAAAUU"
+      ],
+      "row_number": 254,
+      "motif_sha256": "2979989d37c79305d7fb7549b097eed6e651819bfef54a7191ed4d09de8fe01f"
+    },
+    {
+      "id": "m0265",
+      "claimed_minimum": 4,
+      "claimed_candidate_count": 92,
+      "claimed_sequence_count": 1327104,
+      "upper_rivals": [
+        "(((.(*)....)))",
+        "((..(*).....))",
+        "(...(*)......)",
+        "((.((*)).)...)"
+      ],
+      "lower_witnesses": [
+        "UGGAGAAACCACAAUG",
+        "AGGCGAAACCAUAAAU",
+        "UGGCGAAACCUCAUUG",
+        "ACCCCAAAGGCGAAAU"
+      ],
+      "row_number": 265,
+      "motif_sha256": "52cde495ba4e702c50dcadfd0781d6fa4b7449ab233d1ecb6ca435b2fd94ee40"
+    },
+    {
+      "id": "m0295",
+      "claimed_minimum": 6,
+      "claimed_candidate_count": 110,
+      "claimed_sequence_count": 1990656,
+      "upper_rivals": [
+        "((((*).))(*)...)",
+        "(.((*).).(*)...)",
+        "(..(*)..((*).).)",
+        "((((*)))((*).).)",
+        "(..(*)((((*)))))",
+        "((((*)...(*).)))"
+      ],
+      "lower_witnesses": [
+        "ACGUAAAGUCGUAAAGUCAU",
+        "AACCAAAGCGGCAAAGACAU",
+        "AAGUAAAGUCGUAAAGUCAU",
+        "AGGUAAAGUCGUAAAGUCAU",
+        "AACCAAAGUGGUAAAGUCGU",
+        "GUGUAAAGUCGUAAAGUCGU"
+      ],
+      "row_number": 295,
+      "motif_sha256": "4aecc651b16a14f5318a9b52378e2350248a1a82961e9d49ea19af8941283780"
+    },
+    {
+      "id": "m0314",
+      "claimed_minimum": 2,
+      "claimed_candidate_count": 90,
+      "claimed_sequence_count": 1990656,
+      "upper_rivals": [
+        "(.(*)..(.(*).).)",
+        "(.(*)....(*)...)"
+      ],
+      "lower_witnesses": [
+        "AACAAAGGAGUCAAAGCCGU",
+        "AACAAAGGACAAAAAUGCGU"
+      ],
+      "row_number": 314,
+      "motif_sha256": "deb7b2405541695f4d8e945b33de1549d119cebffa1549db3f3740cf32b85d46"
+    },
+    {
+      "id": "m0317",
+      "claimed_minimum": 3,
+      "claimed_candidate_count": 49,
+      "claimed_sequence_count": 497664,
+      "upper_rivals": [
+        "(.(*)((.(*))).)",
+        "(.(*)(..(*)..))",
+        "(.(*)...(*)...)"
+      ],
+      "lower_witnesses": [
+        "CACAAAGGGUCAAAGCCCG",
+        "UAAAAAUCCACAAAGGCGA",
+        "GAUAAAACCAUAAAGGCGC",
+        "UAAAAAUGGUCAAAGCACA"
+      ],
+      "row_number": 317,
+      "motif_sha256": "67c28c942448cf7e842224bb79de5f8a3bcb09b458b0f50fa594bc864be3e876"
+    },
+    {
+      "id": "m0335",
+      "claimed_minimum": 2,
+      "claimed_candidate_count": 14,
+      "claimed_sequence_count": 124416,
+      "upper_rivals": [
+        "(..(.(*).)(*))",
+        "(....(*)..(*))"
+      ],
+      "lower_witnesses": [
+        "AGUGUCAAAGCCAAAAUU",
+        "GGACAAAAAUGCGAAACC"
+      ],
+      "row_number": 335,
+      "motif_sha256": "fd848048241ffa89fce1838ad035c267f7e844a54931ecc0b211c1e0bee08367"
+    },
+    {
+      "id": "m0353",
+      "claimed_minimum": 3,
+      "claimed_candidate_count": 19,
+      "claimed_sequence_count": 124416,
+      "upper_rivals": [
+        "(((.(*))).(*))",
+        "((..(*)..)(*))",
+        "(...(*)...(*))"
+      ],
+      "lower_witnesses": [
+        "GGGUCAAAGCCCGAAACC",
+        "ACCACAAAGGCGGAAACU",
+        "ACCAUAAAGGCGCAAAGU",
+        "AGGUCAAAGCACAAAAUU"
+      ],
+      "row_number": 353,
+      "motif_sha256": "ec1ee020c978a31f578005325784838358b564e86e7d7e3c7967e8ed4c1a6a5c"
+    },
+    {
+      "id": "m0401",
+      "claimed_minimum": 4,
+      "claimed_candidate_count": 126,
+      "claimed_sequence_count": 497664,
+      "upper_rivals": [
+        "(.((.((*)))).)",
+        "(..(.((*)))..)",
+        "((.(.((*))).))",
+        "(....((*))...)"
+      ],
+      "lower_witnesses": [
+        "GCUCACAAAAUGGGUC",
+        "UCAGAGAAAAUCCGAA",
+        "GGCGCAAAAAUUCCUC",
+        "GGCGCAAAAAUUCCAU"
+      ],
+      "row_number": 401,
+      "motif_sha256": "3a4375e0998aad5067704155fcee3f962d56edc86d7f621e3e5db285a140cbc0"
+    },
+    {
+      "id": "m0420",
+      "claimed_minimum": 4,
+      "claimed_candidate_count": 159,
+      "claimed_sequence_count": 5308416,
+      "upper_rivals": [
+        "(.......(*)...)",
+        "(..(....(*))..)",
+        "((.(....(*)).))",
+        "(((.....(*))).)"
+      ],
+      "lower_witnesses": [
+        "GGCGAAAAAAAAUCCAU",
+        "ACACAAAUGAAAUGGAU",
+        "GGCGAAAAAAAAUCCCC",
+        "GCUCAGUUGAAAUGGUC"
+      ],
+      "row_number": 420,
+      "motif_sha256": "7a3d3e66cc280ff51eb813357c6bd1c03312108f646663283e81085660a5fda8"
+    },
+    {
+      "id": "m0470",
+      "claimed_minimum": 2,
+      "claimed_candidate_count": 65,
+      "claimed_sequence_count": 746496,
+      "upper_rivals": [
+        "(((*))..(.(*).))",
+        "(((*))....(*)..)"
+      ],
+      "lower_witnesses": [
+        "UAAAAAUUGUGUCAAAGCCA",
+        "CCAAAAUGGACAAAAAUGCG"
+      ],
+      "row_number": 470,
+      "motif_sha256": "762b5aa00d01d5f2dc74ca407bf81a364602c9025ffbb28ab9284e1a4950ca1f"
+    },
+    {
+      "id": "m0489",
+      "claimed_minimum": 2,
+      "claimed_candidate_count": 96,
+      "claimed_sequence_count": 1990656,
+      "upper_rivals": [
+        "(..(.(*).)(*)..)",
+        "(....(*)..(*)..)"
+      ],
+      "lower_witnesses": [
+        "AGUGUCAAAGCCAAAAUAAU",
+        "GGACAAAAAUGCGAAACAAC"
+      ],
+      "row_number": 489,
+      "motif_sha256": "4f888f6cbad94378dc53142636bad465a4eba2a247d4130b633ff8c6fa6e01bc"
+    },
+    {
+      "id": "m0501",
+      "claimed_minimum": 2,
+      "claimed_candidate_count": 69,
+      "claimed_sequence_count": 1990656,
+      "upper_rivals": [
+        "((*)..(.(*).)..)",
+        "((*)....(*)....)"
+      ],
+      "lower_witnesses": [
+        "ACAAAGGAGUCAAAGCCGAU",
+        "ACAAAGGACAAAAAUGCGAU"
+      ],
+      "row_number": 501,
+      "motif_sha256": "86798d367bf3aca087230d393f08dd5542030bef330ec21c58425d1549adbe27"
+    },
+    {
+      "id": "m0525",
+      "claimed_minimum": 2,
+      "claimed_candidate_count": 56,
+      "claimed_sequence_count": 1990656,
+      "upper_rivals": [
+        "(.....(*)...(*))",
+        "(...(.(*).).(*))"
+      ],
+      "lower_witnesses": [
+        "AGGACAAAAAUGCGAAAAUU",
+        "AGGAGUCAAAGCCGAAAAUU"
+      ],
+      "row_number": 525,
+      "motif_sha256": "92418e8cd640a293246243eb4647b64757929f75d10a49ee73383bfddb82303a"
+    },
+    {
+      "id": "m0562",
+      "claimed_minimum": 3,
+      "claimed_candidate_count": 56,
+      "claimed_sequence_count": 1990656,
+      "upper_rivals": [
+        "((*)..(..(*)..))",
+        "((*).....(*)...)",
+        "((*)..((.(*))).)"
+      ],
+      "lower_witnesses": [
+        "UAAAAUACCCACAAAGGCGA",
+        "GAAAAUAACCAUAAAGGCGC",
+        "CAAAAUAGGGUCAAAGCUCG",
+        "UAAAAUAAGGUCAAAGCACA"
+      ],
+      "row_number": 562,
+      "motif_sha256": "dc835de9a4b5b8205e16e1dc1b9d84a1c54eb0cc9cf36293f6474fb43d8b995e"
+    },
+    {
+      "id": "m0564",
+      "claimed_minimum": 2,
+      "claimed_candidate_count": 21,
+      "claimed_sequence_count": 497664,
+      "upper_rivals": [
+        "(.((*)(*)...).)",
+        "(..(*)(*).....)"
+      ],
+      "lower_witnesses": [
+        "GCCAAAAUAAAAUAGUGUC",
+        "AGCGAAACAAAAUGGACAU"
+      ],
+      "row_number": 564,
+      "motif_sha256": "c5f77f40fa34d7b15c367e2055dab760faa01aba9cf3aa656c6e61fcc8dda9fc"
+    },
+    {
+      "id": "m0569",
+      "claimed_minimum": 3,
+      "claimed_candidate_count": 34,
+      "claimed_sequence_count": 746496,
+      "upper_rivals": [
+        "((.(*))(*)..(*).)",
+        "(..(*).(*)(.(*)))",
+        "((.(*)((*)).(*)))"
+      ],
+      "lower_witnesses": [
+        "UGUCAAAGCAAAAUCAUAAAAGA",
+        "ACAUAAAAGGAAACGUCAAAGCU",
+        "AGUAAAAUCAAAAUGCCAAAGCU"
+      ],
+      "row_number": 569,
+      "motif_sha256": "82d34bf85fe32b35f77bfb64369b6ad3792a2ff2370cc3737d71fa44d7b45e73"
+    },
+    {
+      "id": "m0571",
+      "claimed_minimum": 4,
+      "claimed_candidate_count": 96,
+      "claimed_sequence_count": 746496,
+      "upper_rivals": [
+        "((((*).((*)).)))",
+        "(..(*)(((*)).).)",
+        "((((*))((*))..))",
+        "(.((*).((*))..))"
+      ],
+      "lower_witnesses": [
+        "GUCGAAACCCAAAAUGCGGU",
+        "GACGAAACCCAAAAUGCGGC",
+        "GUCGAAACGUAAAAUGUCGU",
+        "GUCAAAAUACAAAAUGAUGU"
+      ],
+      "row_number": 571,
+      "motif_sha256": "9a3cc146754bc274e34b5421f9a1e03ec488478e909eb0598a5c5693d2a4c73c"
+    },
+    {
+      "id": "m0618",
+      "claimed_minimum": 3,
+      "claimed_candidate_count": 110,
+      "claimed_sequence_count": 1990656,
+      "upper_rivals": [
+        "(((.(*)..(*))).)",
+        "((..(*)..(*).).)",
+        "(...(*)..(*)...)"
+      ],
+      "lower_witnesses": [
+        "GCCCGAAACAACAAAGGGUC",
+        "GGCGCAAAGAAUAAAACCAU",
+        "GGCGAAAAUAAAAAAUCCAC",
+        "GCACAAAAUAAAAAAUGGUC"
+      ],
+      "row_number": 618,
+      "motif_sha256": "aba81eeb003a04a78bd98944f95a3b54c1d94f4608fe12522bc6b05db3bc9ea8"
+    },
+    {
+      "id": "m0624",
+      "claimed_minimum": 2,
+      "claimed_candidate_count": 21,
+      "claimed_sequence_count": 221184,
+      "upper_rivals": [
+        "(....((*)).)",
+        "(.....(*)..)"
+      ],
+      "lower_witnesses": [
+        "AAAAAGCAAAGCCU",
+        "ACCCCAAAAAUAUU"
+      ],
+      "row_number": 624,
+      "motif_sha256": "b8dc92de332f08c2cfd6a60d63be89f6a844cb1ef38a6dfd1d2adaf6e1d435ef"
+    },
+    {
+      "id": "m0630",
+      "claimed_minimum": 3,
+      "claimed_candidate_count": 69,
+      "claimed_sequence_count": 746496,
+      "upper_rivals": [
+        "((*)((.((*)))).)",
+        "((*)(..((*))..))",
+        "((*)...((*))...)"
+      ],
+      "lower_witnesses": [
+        "CCAAAGGGUCAAAAUGCUCG",
+        "UAAAAUGGUCAAAAUGCACA",
+        "CUAAAACCAUAAAAUGGCGG"
+      ],
+      "row_number": 630,
+      "motif_sha256": "d3603b5e12cfd3243baafcef0326ded49b6a8b328192c1a5169377bb7b2b785e"
+    },
+    {
+      "id": "m0641",
+      "claimed_minimum": 4,
+      "claimed_candidate_count": 220,
+      "claimed_sequence_count": 5308416,
+      "upper_rivals": [
+        "(.(..(*)..)...)",
+        "(.((.(*)))....)",
+        "(....(*)......)",
+        "(.(.((*)).)...)"
+      ],
+      "lower_witnesses": [
+        "AAGGAAAAAUCACAAAU",
+        "AAGGCGAAACCCCAAAU",
+        "ACGGCGAAACCAUAAAU",
+        "AACCCCAAAGGCGAAAU"
+      ],
+      "row_number": 641,
+      "motif_sha256": "c082d2f5852e6e68390fad78441a6c1da83684316e1e3c8c6244a6f9bd4d3c40"
+    },
+    {
+      "id": "m0653",
+      "claimed_minimum": 3,
+      "claimed_candidate_count": 90,
+      "claimed_sequence_count": 1990656,
+      "upper_rivals": [
+        "(.(*).(..(*)..))",
+        "(((*)....(*)..))",
+        "(.(*)....(*)...)"
+      ],
+      "lower_witnesses": [
+        "UCCAAAGCGGAGAAAUGACA",
+        "CGUAAAGUCGAGAAAUGACG",
+        "UCCAAAGCGAAAAAAUAAUA"
+      ],
+      "row_number": 653,
+      "motif_sha256": "c026990664cfd5d2f1f59a6740642ea5a3004493176cde4f75148ec86332387f"
+    },
+    {
+      "id": "m0656",
+      "claimed_minimum": 3,
+      "claimed_candidate_count": 34,
+      "claimed_sequence_count": 497664,
+      "upper_rivals": [
+        "(((..(*)(*))).)",
+        "((...(*)(*).).)",
+        "(....(*)(*)...)"
+      ],
+      "lower_witnesses": [
+        "GCCCGAAAAUCAAAGGGUC",
+        "GGCGCAAAAUUAAAACCAU",
+        "GGCGAAAAAUAAAAUCCAC",
+        "GCACAAAAAUAAAAUGGUC"
+      ],
+      "row_number": 656,
+      "motif_sha256": "c59688d9e2a94f986e97f05ad3c765f38fdda69d027dc4d5552d47e61c48d5d5"
+    },
+    {
+      "id": "m0664",
+      "claimed_minimum": 3,
+      "claimed_candidate_count": 254,
+      "claimed_sequence_count": 1990656,
+      "upper_rivals": [
+        "(.....(*).....)",
+        "(((.(.(*))..)))",
+        "((..(((*))).).)"
+      ],
+      "lower_witnesses": [
+        "GGGUCACAAAGGCUCAC",
+        "UCCUCACAAAGGGCGAA",
+        "GCCACUCAAAGGGCGAC",
+        "GGGCGAAAAAUCCUCUC",
+        "AGGACUCAAAGGCACUU"
+      ],
+      "row_number": 664,
+      "motif_sha256": "164a4094a4d5f53bbd3e7b0f0d96661047f073aa011b0671563041a5f89c1197"
+    },
+    {
+      "id": "m0682",
+      "claimed_minimum": 3,
+      "claimed_candidate_count": 65,
+      "claimed_sequence_count": 1990656,
+      "upper_rivals": [
+        "(...(.(*))(*)..)",
+        "(.....(*)((*)).)",
+        "(..(..(*).(*)).)"
+      ],
+      "lower_witnesses": [
+        "GCUGGUCAAAGCGAAACCUC",
+        "UGACGUAAAAUCAAAAUGAG",
+        "UGACUAAAAAUAGAAACGAG"
+      ],
+      "row_number": 682,
+      "motif_sha256": "270dddfce4d24755df50ca17c698c12d4d21b0852f511722bb0c8abf6aa1750e"
+    },
+    {
+      "id": "m0692",
+      "claimed_minimum": 3,
+      "claimed_candidate_count": 34,
+      "claimed_sequence_count": 497664,
+      "upper_rivals": [
+        "((*).(..(*)..))",
+        "((*)....(*)...)",
+        "((*).((.(*))).)"
+      ],
+      "lower_witnesses": [
+        "UAAAAUUCCACAAAGGCGA",
+        "GAAAAUACCAUAAAGGCGC",
+        "CAAAAUGGGUCAAAGCUCG",
+        "UAAAAUAGGUCAAAGCACA"
+      ],
+      "row_number": 692,
+      "motif_sha256": "5e661a47780b9820799a42702c95f791a9d5772f406133532623969aca1997a1"
+    },
+    {
+      "id": "m0695",
+      "claimed_minimum": 3,
+      "claimed_candidate_count": 19,
+      "claimed_sequence_count": 746496,
+      "upper_rivals": [
+        "(((.(*))).(*)(*))",
+        "((..(*)..)(*)(*))",
+        "(...(*)...(*)(*))"
+      ],
+      "lower_witnesses": [
+        "GGGUCAAAGCCCGAAACAAAAUC",
+        "ACCACAAAGGCGGAAACAAAAUU",
+        "ACCAUAAAGGCGCAAAGAAAAUU",
+        "AGGUCAAAGCACAAAAUAAAAUU"
+      ],
+      "row_number": 695,
+      "motif_sha256": "7f556c87b2fbcba3492516e0b527d7d70108918fac063e1b716b384049e0d75f"
+    },
+    {
+      "id": "m0716",
+      "claimed_minimum": 3,
+      "claimed_candidate_count": 90,
+      "claimed_sequence_count": 746496,
+      "upper_rivals": [
+        "(..((*)((*)))..)",
+        "(...(*)((*))...)",
+        "(((.(*)((*)))).)"
+      ],
+      "lower_witnesses": [
+        "GGCGAAAAUAUAAAAUCCAU",
+        "GCUCGAAACCAAAAUGGGUC",
+        "GCGCAAAAUAGAAACUGGUC"
+      ],
+      "row_number": 716,
+      "motif_sha256": "634860821aa2c118acfb1de299487d17cd8ff9c024084f0bbd2b0cb67e7527d1"
+    },
+    {
+      "id": "m0717",
+      "claimed_minimum": 3,
+      "claimed_candidate_count": 110,
+      "claimed_sequence_count": 1990656,
+      "upper_rivals": [
+        "((..(*).).(*)..)",
+        "(...(*).(((*))))",
+        "(...(*)..((*).))"
+      ],
+      "lower_witnesses": [
+        "UCGAUAAAGAGGCAAAGACA",
+        "CCGAUAAAGAGGUAAAGUCG",
+        "UGUUUAAAGUCCCAAAGCGA"
+      ],
+      "row_number": 717,
+      "motif_sha256": "ce1298966bf82732966007e37203d6e0639293659836a5fa5d874f53d1a0047d"
+    },
+    {
+      "id": "m0719",
+      "claimed_minimum": 4,
+      "claimed_candidate_count": 126,
+      "claimed_sequence_count": 497664,
+      "upper_rivals": [
+        "((.((.(*))).))",
+        "((..(.(*))..))",
+        "(((.(.(*)).)))",
+        "((....(*)...))"
+      ],
+      "lower_witnesses": [
+        "AGCUCACAAAGGGUCU",
+        "AGGAGCGAAACCCGCU",
+        "AGGCGAAAAAUCCUCU",
+        "AGGCGAAAAAUCCAUU"
+      ],
+      "row_number": 719,
+      "motif_sha256": "3e4fd4313fd62339c5a500863d666d95aa30052b202b890b37a97d1d4dc48084"
+    },
+    {
+      "id": "m0732",
+      "claimed_minimum": 4,
+      "claimed_candidate_count": 220,
+      "claimed_sequence_count": 1990656,
+      "upper_rivals": [
+        "(..(.(.(*)))..)",
+        "(.((.(.(*)))).)",
+        "((.(.(.(*))).))",
+        "(....(.(*))...)"
+      ],
+      "lower_witnesses": [
+        "GGCGCGCGAAACCCCAC",
+        "GCUCACACAAAGGGGUC",
+        "GGCGAGACAAAGCCCUC",
+        "GGCGAGCGAAACCCCAU"
+      ],
+      "row_number": 732,
+      "motif_sha256": "257a2e7783dfea2fe302846f5f10712fdff462e9e4ad78a302d6048cc8514039"
+    },
+    {
+      "id": "m0756",
+      "claimed_minimum": 3,
+      "claimed_candidate_count": 69,
+      "claimed_sequence_count": 884736,
+      "upper_rivals": [
+        "(....(*)....)",
+        "((.(.(*).).))",
+        "(..(((*)).).)"
+      ],
+      "lower_witnesses": [
+        "AACAGAAAAUAAUAU",
+        "GUACAGAAACAGGGC",
+        "GAGGGGAAACUACAC"
+      ],
+      "row_number": 756,
+      "motif_sha256": "5b42c785950e29b9cab26bb7020c67d3a0a1bdec6c3a6eff557d3bf4e23f9387"
+    },
+    {
+      "id": "m0779",
+      "claimed_minimum": 4,
+      "claimed_candidate_count": 34,
+      "claimed_sequence_count": 82944,
+      "upper_rivals": [
+        "((.((*).).))",
+        "(..((*).)..)",
+        "(...(*)....)",
+        "(((.(*).)).)"
+      ],
+      "lower_witnesses": [
+        "GGCGUAAAGACCUC",
+        "GGAGUAAAGUCCAC",
+        "GGCGUAAAGACCAU",
+        "GCCCAAAAUAGGUC"
+      ],
+      "row_number": 779,
+      "motif_sha256": "0ba0c55707db03f415f968c93b3f7fc3d2bad28144cb5308775ef86376628733"
+    },
+    {
+      "id": "m0812",
+      "claimed_minimum": 2,
+      "claimed_candidate_count": 64,
+      "claimed_sequence_count": 5308416,
+      "upper_rivals": [
+        "(.(....)...(*))",
+        "(..........(*))"
+      ],
+      "lower_witnesses": [
+        "CGCCUCGGACACAAAGG",
+        "UCCCUCGGCGAAAAAUA"
+      ],
+      "row_number": 812,
+      "motif_sha256": "1bccd6efecd9ded5f29463ee78191c1457a79247f7d12d36718539c3782d098b"
+    },
+    {
+      "id": "m0820",
+      "claimed_minimum": 3,
+      "claimed_candidate_count": 90,
+      "claimed_sequence_count": 1990656,
+      "upper_rivals": [
+        "(.(*).(..(*)..))",
+        "(.(*)....(*)...)",
+        "(.(*).((.(*))).)"
+      ],
+      "lower_witnesses": [
+        "UAUAAAACCCACAAAGGCGA",
+        "GAAAAAUACCAUAAAGGCGC",
+        "CAAAAAUGGGUCAAAGCUCG",
+        "UAAAAAUAGGUCAAAGCACA"
+      ],
+      "row_number": 820,
+      "motif_sha256": "4aa99995e3e50ce4b00bfe248fabc213dcfed19daca62defd10717c46ac05412"
+    },
+    {
+      "id": "m0839",
+      "claimed_minimum": 3,
+      "claimed_candidate_count": 159,
+      "claimed_sequence_count": 5308416,
+      "upper_rivals": [
+        "(.((....(*))).)",
+        "(.(.....(*)..))",
+        "(..(....(*))..)"
+      ],
+      "lower_witnesses": [
+        "GCGCAAGUGAAAUGUCC",
+        "GUCCAAAUGAAAUGCGU",
+        "AAGCAAAUGAAAUGACU"
+      ],
+      "row_number": 839,
+      "motif_sha256": "a0db32dcad28b14648db8b7657d7d02f3a6b37f334cca6a6cec285972ee8626e"
+    },
+    {
+      "id": "m0855",
+      "claimed_minimum": 3,
+      "claimed_candidate_count": 110,
+      "claimed_sequence_count": 746496,
+      "upper_rivals": [
+        "(.(.(*))((*))..)",
+        "(...(*)(((*))).)",
+        "((..(*).((*))).)"
+      ],
+      "lower_witnesses": [
+        "AGGUCAAAGCGAAAAUCCAU",
+        "UCGUAAAAUCAAAAAUUGUA",
+        "GCUAUAAAGAGAAAAUCGCC"
+      ],
+      "row_number": 855,
+      "motif_sha256": "f005516d97203750e9eee9bb4f140b500fdfb3210be05821ad591587034b2fc6"
+    },
+    {
+      "id": "m0857",
+      "claimed_minimum": 2,
+      "claimed_candidate_count": 92,
+      "claimed_sequence_count": 1327104,
+      "upper_rivals": [
+        "(((.(*)....)))",
+        "((..(*).....))"
+      ],
+      "lower_witnesses": [
+        "AGCCAAAAUAAAAGCU",
+        "AACGUAAAGUAAACUU"
+      ],
+      "row_number": 857,
+      "motif_sha256": "41d14f9043c1f7b3d42d8eae5a07942ab2c73130b5203a31ef3248e9f8ec7692"
+    },
+    {
+      "id": "m0866",
+      "claimed_minimum": 3,
+      "claimed_candidate_count": 254,
+      "claimed_sequence_count": 5308416,
+      "upper_rivals": [
+        "(....((*))....)",
+        "((.(.((*)).).))",
+        "(..((((*))).).)"
+      ],
+      "lower_witnesses": [
+        "AACAGGAAAAUCAAUAU",
+        "GUACAGAAAAUCAGGGC",
+        "GAGGGGAAAAUCUACAC"
+      ],
+      "row_number": 866,
+      "motif_sha256": "c5040d369310de350f97d199fa993e5f90d0be7fb821c177b16ce129dafffd31"
+    },
+    {
+      "id": "m0885",
+      "claimed_minimum": 1,
+      "claimed_candidate_count": 159,
+      "claimed_sequence_count": 1990656,
+      "upper_rivals": [
+        "((.((*))).....)"
+      ],
+      "lower_witnesses": [
+        "CGACCAAAGGCGAAACG"
+      ],
+      "row_number": 885,
+      "motif_sha256": "56dd786e5f0445ddb3a667428c7a6671f356e34c11c0e1838c76c775f1578076"
+    },
+    {
+      "id": "m0916",
+      "claimed_minimum": 2,
+      "claimed_candidate_count": 56,
+      "claimed_sequence_count": 746496,
+      "upper_rivals": [
+        "(..(.((*)).)(*))",
+        "(....((*))..(*))"
+      ],
+      "lower_witnesses": [
+        "AGUGUCAAAAUGCCAAAAUU",
+        "GGACAUAAAAUAGCGAAACC"
+      ],
+      "row_number": 916,
+      "motif_sha256": "05c43816871cd7312c7d7e90b1f7772565c5eb36d6a62743052bd86617eb2396"
+    },
+    {
+      "id": "m0920",
+      "claimed_minimum": 2,
+      "claimed_candidate_count": 40,
+      "claimed_sequence_count": 497664,
+      "upper_rivals": [
+        "(..(.(*).)(*).)",
+        "(....(*)..(*).)"
+      ],
+      "lower_witnesses": [
+        "AGUGUCAAAGCCAAAAUAU",
+        "GGACAAAAAUGCGAAACAC"
+      ],
+      "row_number": 920,
+      "motif_sha256": "91dfb8ba91396d24edc9559d93d4d2fc1ce1eca663b1051c2368d5532ecb134f"
+    },
+    {
+      "id": "m0941",
+      "claimed_minimum": 1,
+      "claimed_candidate_count": 92,
+      "claimed_sequence_count": 5308416,
+      "upper_rivals": [
+        "(.......(.(*)))"
+      ],
+      "lower_witnesses": [
+        "CCCUCGGGGCCAAAGCG"
+      ],
+      "row_number": 941,
+      "motif_sha256": "28be2964a8fabd5b045fdf1e9a82c0bddd62c8a2f893ea70b2a98aea64efd79e"
+    },
+    {
+      "id": "m0968",
+      "claimed_minimum": 2,
+      "claimed_candidate_count": 14,
+      "claimed_sequence_count": 746496,
+      "upper_rivals": [
+        "((*)..(.(*).)(*))",
+        "((*)....(*)..(*))"
+      ],
+      "lower_witnesses": [
+        "AAAAAUGUGUCAAAGCCAAAAUU",
+        "ACAAAGGACAAAAAUGCGAAACU"
+      ],
+      "row_number": 968,
+      "motif_sha256": "f632bdb698d2448b2e0050c7b2e5354985bbff9f8770944ed566a7885c7e937c"
+    },
+    {
+      "id": "m0973",
+      "claimed_minimum": 2,
+      "claimed_candidate_count": 34,
+      "claimed_sequence_count": 1990656,
+      "upper_rivals": [
+        "(....(.(*).)(*))",
+        "(......(*)..(*))"
+      ],
+      "lower_witnesses": [
+        "AAAGUGUCAAAGCCAAAAUU",
+        "AAGGACAAAAAUGCGAAACU"
+      ],
+      "row_number": 973,
+      "motif_sha256": "91d54d6805bc4c4ea928c3702d1baef0653fe6e02db911a4c972b7ba418bc96e"
+    },
+    {
+      "id": "m0998",
+      "claimed_minimum": 2,
+      "claimed_candidate_count": 159,
+      "claimed_sequence_count": 5308416,
+      "upper_rivals": [
+        "((..(*).....).)",
+        "(.(.(*))......)"
+      ],
+      "lower_witnesses": [
+        "UCGAGAAACCAAAAGAA",
+        "GUGUCAAAGCUUGUGUC"
+      ],
+      "row_number": 998,
+      "motif_sha256": "c4972b3584c159d966301a2877e8f74efbfb2904c8a3f256ee035ccc25829f10"
+    },
+    {
+      "id": "m1006",
+      "claimed_minimum": 3,
+      "claimed_candidate_count": 118,
+      "claimed_sequence_count": 1990656,
+      "upper_rivals": [
+        "((.(*).......))",
+        "((.(*)).......)",
+        "((.(*).)......)"
+      ],
+      "lower_witnesses": [
+        "CGAUAAAGCGGAACCCG",
+        "CGUCAAAGCCAAGUUGG",
+        "AAUCAAAGUGGACCCCU",
+        "CCUUAAAAGGCAAUGCG"
+      ],
+      "row_number": 1006,
+      "motif_sha256": "243ab8da321961486f33bbc0cbc43f51b249328a41b2690af48553d41c33b59d"
+    },
+    {
+      "id": "m1016",
+      "claimed_minimum": 4,
+      "claimed_candidate_count": 126,
+      "claimed_sequence_count": 1327104,
+      "upper_rivals": [
+        "((...(*)...).)",
+        "(....(*).....)",
+        "((.(.(*)..).))",
+        "(((..(*)..)).)"
+      ],
+      "lower_witnesses": [
+        "ACACUAAAAUCUGGAU",
+        "CCAUAAAAAUCCGGCG",
+        "AGAGAGAAAUAGCCAU",
+        "GGUGAGAAAUAGCCUC",
+        "GCUCAGAAAUAGGGUC"
+      ],
+      "row_number": 1016,
+      "motif_sha256": "7c4f0f9e65579141ef85d55ec0baef93c3c2d486324044fbd7b3d8974227f3f8"
+    },
+    {
+      "id": "m1022",
+      "claimed_minimum": 2,
+      "claimed_candidate_count": 65,
+      "claimed_sequence_count": 1990656,
+      "upper_rivals": [
+        "(..(..(*).)(*).)",
+        "(.(...(*)..(*)))"
+      ],
+      "lower_witnesses": [
+        "GUCCGAUAAAGAGGAAACGU",
+        "GCGGGAUAAAGACGAAACCC"
+      ],
+      "row_number": 1022,
+      "motif_sha256": "24af5b4126ce923c749eb191264a881ee429e93e76599006dbdac0c89f49a699"
+    },
+    {
+      "id": "m1053",
+      "claimed_minimum": 3,
+      "claimed_candidate_count": 92,
+      "claimed_sequence_count": 5308416,
+      "upper_rivals": [
+        "(.((....))(*).)",
+        "(.(......)(*).)",
+        "(.........(*).)"
+      ],
+      "lower_witnesses": [
+        "UGGCAAAGGCGAAACAA",
+        "GGGGAAGCGCGAAACAC",
+        "AGGGAAGCGCAAAAUAU"
+      ],
+      "row_number": 1053,
+      "motif_sha256": "39b7390532783d4607eec8f7ed4b325f1ee66c7bc229c81ba212524d2ab9a0a6"
+    },
+    {
+      "id": "m1056",
+      "claimed_minimum": 2,
+      "claimed_candidate_count": 118,
+      "claimed_sequence_count": 5308416,
+      "upper_rivals": [
+        "(......(((*))))",
+        "(........(*)..)"
+      ],
+      "lower_witnesses": [
+        "CACCUCGGGUAAAGUCG",
+        "CACCUCGGGCAAAGACG"
+      ],
+      "row_number": 1056,
+      "motif_sha256": "0420bece195da09fa2b32e83ae5f5abcc23aad9556f19cb93729cb11eb838fd3"
+    },
+    {
+      "id": "m1067",
+      "claimed_minimum": 4,
+      "claimed_candidate_count": 220,
+      "claimed_sequence_count": 1990656,
+      "upper_rivals": [
+        "((.(((*).).).))",
+        "((..((*).)..).)",
+        "(..(((*).).)..)",
+        "(...((*).)....)"
+      ],
+      "lower_witnesses": [
+        "GGCGCCAAAGAGACCUC",
+        "GGUGCAAAAUAGUCCGC",
+        "GGUCCCAAAGCGCGCUC",
+        "GGCGCCAAAGUGUCCAU",
+        "GCCCCCAAAGAGAGGUC",
+        "UGUCCCAAAGAGUGUAA"
+      ],
+      "row_number": 1067,
+      "motif_sha256": "2a5796a2d520c2a9521be84d08c88be3f29f1379a4031aacfef979dea4ca9880"
+    },
+    {
+      "id": "m1075",
+      "claimed_minimum": 2,
+      "claimed_candidate_count": 126,
+      "claimed_sequence_count": 1327104,
+      "upper_rivals": [
+        "((...(*)...).)",
+        "(...((*).)...)"
+      ],
+      "lower_witnesses": [
+        "UCGCGUAAAGUCAGAA",
+        "ACUACCAAAGAGGGAU"
+      ],
+      "row_number": 1075,
+      "motif_sha256": "8b379971c4aaa3a15f087867c18d146f2dc367914bbbaff0ad4f896696bb794f"
+    },
+    {
+      "id": "m1082",
+      "claimed_minimum": 1,
+      "claimed_candidate_count": 61,
+      "claimed_sequence_count": 1327104,
+      "upper_rivals": [
+        "(......((*).))"
+      ],
+      "lower_witnesses": [
+        "CUAAAAACCAAAGCGG"
+      ],
+      "row_number": 1082,
+      "motif_sha256": "dc4e28e7fe1ef9d4e2a389d0d790ab75e7aa97ca34389ae4bf830a6df42ea2fb"
+    },
+    {
+      "id": "m1086",
+      "claimed_minimum": 4,
+      "claimed_candidate_count": 110,
+      "claimed_sequence_count": 746496,
+      "upper_rivals": [
+        "(((((*)).(*).)))",
+        "(..((*))((*).).)",
+        "(((((*)))(*)..))",
+        "(.(((*)).(*)..))"
+      ],
+      "lower_witnesses": [
+        "GUCGUAAAACCCAAAGCGGU",
+        "GACGAAAAUCCCAAAGCGGC",
+        "GUCAAAAAUUGUAAAGUCGU",
+        "GUCGAAAAUCAAAAAUCUGU"
+      ],
+      "row_number": 1086,
+      "motif_sha256": "80a758ae2d22624a7c6ab3759986a099e3a9903e0a764cd2a534b45853960f9f"
+    },
+    {
+      "id": "m1099",
+      "claimed_minimum": 5,
+      "claimed_candidate_count": 126,
+      "claimed_sequence_count": 1327104,
+      "upper_rivals": [
+        "(.(...(*)...))",
+        "(.((.((*).))))",
+        "(....((*).)..)",
+        "(.(.(((*))).))",
+        "(.(..((*))..))"
+      ],
+      "lower_witnesses": [
+        "AAGAACCAAAGAGGCU",
+        "AAGUACCAAAGAGGCU",
+        "GAUAGCCAAAGAGAGC",
+        "AAGAGGUAAAGUCACU",
+        "ACGCUGCAAAGUCUCU"
+      ],
+      "row_number": 1099,
+      "motif_sha256": "7c2388600321dae8af097263180d09d792f1b92e87eaaea7eef88fe8de341e5b"
+    },
+    {
+      "id": "m1142",
+      "claimed_minimum": 3,
+      "claimed_candidate_count": 90,
+      "claimed_sequence_count": 746496,
+      "upper_rivals": [
+        "((.(.(*))(*)..))",
+        "((...(*)((*)).))",
+        "(((..(*).(*)).))"
+      ],
+      "lower_witnesses": [
+        "AAGGUCAAAGCGAAACCAUU",
+        "AGCGUAAAAUCAAAAUGUCU",
+        "AGCUAUAAAGAGAAACGUCU"
+      ],
+      "row_number": 1142,
+      "motif_sha256": "47569b6154f726bc9891ddb0de3d135d609a340d1f580febab01a69847a7e4cd"
+    },
+    {
+      "id": "m1180",
+      "claimed_minimum": 4,
+      "claimed_candidate_count": 126,
+      "claimed_sequence_count": 497664,
+      "upper_rivals": [
+        "((.(((*)).).))",
+        "(..(((*)).)..)",
+        "(...((*))....)",
+        "(((.((*)).)).)"
+      ],
+      "lower_witnesses": [
+        "GGCGUAAAAUGUCCUC",
+        "GGAGUAAAAUGUCCAC",
+        "GGCGUAAAAUGUCCAU",
+        "GCUCAUAAAGUAGGUC"
+      ],
+      "row_number": 1180,
+      "motif_sha256": "2927d688d327a603612c3b293f07a6d9e0fcc9d559f2c1b440d25b0cc431a5e4"
+    },
+    {
+      "id": "m1208",
+      "claimed_minimum": 3,
+      "claimed_candidate_count": 69,
+      "claimed_sequence_count": 1990656,
+      "upper_rivals": [
+        "(.(..(*)..).(*))",
+        "(....(*)....(*))",
+        "(.((.(*)))..(*))"
+      ],
+      "lower_witnesses": [
+        "ACCCACAAAGGCGAAAAAUU",
+        "AACCAUAAAGGCGCAAAAUU",
+        "AGGGUCAAAGCUCGAAAAUU",
+        "AAGGUCAAAGCACAAAAAUU"
+      ],
+      "row_number": 1208,
+      "motif_sha256": "5125d74edb01671ec541edc443fb743c9ee63833ffd0ade0ed7154015db23ea4"
+    },
+    {
+      "id": "m1213",
+      "claimed_minimum": 4,
+      "claimed_candidate_count": 220,
+      "claimed_sequence_count": 1990656,
+      "upper_rivals": [
+        "(((.((*).).)).)",
+        "((..((*).)..).)",
+        "((((.(*).)).).)",
+        "((...(*)....).)"
+      ],
+      "lower_witnesses": [
+        "GGGCGUAAAGUCCUCAC",
+        "GGGCGUAAAGUCCACAC",
+        "GCCUCCAAAGAGGCGAC",
+        "AGGCGUAAAGACCAUAU"
+      ],
+      "row_number": 1213,
+      "motif_sha256": "4ad1e4054171ccd9342db83dabc9831d30913e61b6f520f98da4bd502285a229"
+    },
+    {
+      "id": "m1218",
+      "claimed_minimum": 4,
+      "claimed_candidate_count": 90,
+      "claimed_sequence_count": 746496,
+      "upper_rivals": [
+        "(((((*).(*).))))",
+        "((..(*)((*).).))",
+        "((.((*).(*)..)))",
+        "(((((*))(*)..)))"
+      ],
+      "lower_witnesses": [
+        "AGUCGAAACCCAAAGCGGUU",
+        "AGACGAAACCCAAAGCGGCU",
+        "AGCGAAAAUAUAAAGAUCCU",
+        "AGUCAAAAUGUAAAGUCGUU"
+      ],
+      "row_number": 1218,
+      "motif_sha256": "917331282a9abe01e018197a353f3ba6a27789f9760231aec4cc804500d849e7"
+    },
+    {
+      "id": "m1220",
+      "claimed_minimum": 2,
+      "claimed_candidate_count": 90,
+      "claimed_sequence_count": 746496,
+      "upper_rivals": [
+        "(.(((*))(*)..).)",
+        "(..((*))(*)....)"
+      ],
+      "lower_witnesses": [
+        "GCCAUAAAAUGAAACGUGUC",
+        "AGCGUAAAGCUAAAGGACAU"
+      ],
+      "row_number": 1220,
+      "motif_sha256": "fe84f05a8d0c831b40c786a138bcc1ebae6208a377b2b8c3fd3d879b88c737c6"
+    },
+    {
+      "id": "m1230",
+      "claimed_minimum": 3,
+      "claimed_candidate_count": 24,
+      "claimed_sequence_count": 124416,
+      "upper_rivals": [
+        "(.(.(*))(*)..)",
+        "(...(*)((*)).)",
+        "((..(*).(*)).)"
+      ],
+      "lower_witnesses": [
+        "AGGUCAAAGCGAAACCAU",
+        "UCGUAAAAUCAAAAUGUA",
+        "GCUAUAAAGAGAAACGCC"
+      ],
+      "row_number": 1230,
+      "motif_sha256": "2c66dbb2e7afbf869753a9132e82b68d72a1dae46b76036598ec3c0bd097e2b4"
+    },
+    {
+      "id": "m1271",
+      "claimed_minimum": 2,
+      "claimed_candidate_count": 159,
+      "claimed_sequence_count": 5308416,
+      "upper_rivals": [
+        "((..(*).....).)",
+        "(((.(*)....)).)"
+      ],
+      "lower_witnesses": [
+        "ACACAAAAUAAAAGGAU",
+        "GGUCAAAAUAUAAGCUC"
+      ],
+      "row_number": 1271,
+      "motif_sha256": "fb76f5c9c6d842fabb52e8ac863bc82e0e5aa1bdb7213b76953965cab3031513"
+    },
+    {
+      "id": "m1293",
+      "claimed_minimum": 3,
+      "claimed_candidate_count": 110,
+      "claimed_sequence_count": 1990656,
+      "upper_rivals": [
+        "(...(*)..((*)).)",
+        "(.(.(*)..)(*)..)",
+        "((..(*)...(*)).)"
+      ],
+      "lower_witnesses": [
+        "GCGAGAAAUGACGAAACGAU",
+        "AUGAGAAAUGACGAAACAUU",
+        "GGGAGAAAUGACGAAACCAU",
+        "GCUUAAAAUCUAAAAAUGCC"
+      ],
+      "row_number": 1293,
+      "motif_sha256": "6b0aac16d3fb94e4e11fc270be8df7f0b00c3c037eaedecb2446d7414615b2a5"
+    },
+    {
+      "id": "m1385",
+      "claimed_minimum": 5,
+      "claimed_candidate_count": 273,
+      "claimed_sequence_count": 5308416,
+      "upper_rivals": [
+        "(((......))..)",
+        "((..(....)..))",
+        "(((.(....).)))",
+        "((.((....)).))",
+        "(((.......).))"
+      ],
+      "lower_witnesses": [
+        "AGGCGGUUACCAUU",
+        "AAGAGGUUACCGUU",
+        "AGGUCCUCGGCUCU",
+        "AGCUCAAAAGGUCU",
+        "GCCAUGAAGGGCGC"
+      ],
+      "row_number": 1385,
+      "motif_sha256": "708c095ea61d2ca46612d086feee5f0fa8e726ce7333e8255516c083a358583a"
+    },
+    {
+      "id": "m1401",
+      "claimed_minimum": 3,
+      "claimed_candidate_count": 118,
+      "claimed_sequence_count": 1990656,
+      "upper_rivals": [
+        "(.((*)).......)",
+        "(.((*)......).)",
+        "(..(*)........)"
+      ],
+      "lower_witnesses": [
+        "GUCGAAACGCCAAGCGU",
+        "GUGGAAACGCCCCGCCC",
+        "GUCGAAAUCCCAUGGGU"
+      ],
+      "row_number": 1401,
+      "motif_sha256": "35820582a830ac7332f4d50238ff189663005e9f3e8be1a653a540b9d7680476"
+    },
+    {
+      "id": "m1419",
+      "claimed_minimum": 3,
+      "claimed_candidate_count": 96,
+      "claimed_sequence_count": 746496,
+      "upper_rivals": [
+        "(.(.((*)))(*)..)",
+        "(...((*))((*)).)",
+        "((..((*)).(*)).)"
+      ],
+      "lower_witnesses": [
+        "AGGUCAAAAUGCGAAACCAU",
+        "UCGUGAAAAUCCAAAAUGUA",
+        "GCUAGAAAAUCAAAAAUGCC"
+      ],
+      "row_number": 1419,
+      "motif_sha256": "3d0fbac03aa1ed1fe3b655703ba290d5f8cce0f1105ccba2429dc2de64c9f037"
+    },
+    {
+      "id": "m1448",
+      "claimed_minimum": 3,
+      "claimed_candidate_count": 90,
+      "claimed_sequence_count": 746496,
+      "upper_rivals": [
+        "(((.(*))).((*)))",
+        "((..(*)..)((*)))",
+        "(...(*)...((*)))"
+      ],
+      "lower_witnesses": [
+        "GGGUCAAAGCUCGAAAAUCC",
+        "ACCAUAAAGGCGGAAAAUCU",
+        "GGGUCAAAGCGCGUAAAAUC"
+      ],
+      "row_number": 1448,
+      "motif_sha256": "45ce5d45dc782bf0ca26b505139043a3f777e9c43d5a57f45003506e1187fdd5"
+    },
+    {
+      "id": "m1473",
+      "claimed_minimum": 3,
+      "claimed_candidate_count": 96,
+      "claimed_sequence_count": 1990656,
+      "upper_rivals": [
+        "(.((*)..(*)..).)",
+        "(.((*)).(*)....)",
+        "(..(*)..(*)....)"
+      ],
+      "lower_witnesses": [
+        "GCGGAAACGAGAAAUGACCC",
+        "UUAGAAACGAGAAAUGACUA",
+        "GUCAAAAUGAGAAAUGACGU"
+      ],
+      "row_number": 1473,
+      "motif_sha256": "5cf167720826b356d9d990cb071c9e1eb4bf1737014a66407783a7755597424c"
+    },
+    {
+      "id": "m1491",
+      "claimed_minimum": 3,
+      "claimed_candidate_count": 45,
+      "claimed_sequence_count": 3538944,
+      "upper_rivals": [
+        "(((*).)......)",
+        "(.(*)(......))",
+        "(.(*)........)"
+      ],
+      "lower_witnesses": [
+        "CGGAAACACGAACGGG",
+        "CAGAAACGGGAAAACG",
+        "ACAAAAUAAUAAAUUU"
+      ],
+      "row_number": 1491,
+      "motif_sha256": "a444dfbaa7fc8747dfb3f7485fc04c1ad79abeb24192eece7dbccadca16c7781"
+    },
+    {
+      "id": "m1495",
+      "claimed_minimum": 2,
+      "claimed_candidate_count": 118,
+      "claimed_sequence_count": 5308416,
+      "upper_rivals": [
+        "(..(*)........)",
+        "((((*))(...)).)"
+      ],
+      "lower_witnesses": [
+        "GCAAAAAUCCAAGGGCC",
+        "GCGGAAACCCUCGGGUC"
+      ],
+      "row_number": 1495,
+      "motif_sha256": "f9df0cfed5f1d1a21a59444550ae084e34e73cb24bacc431d0ad32a54666944f"
+    },
+    {
+      "id": "m1508",
+      "claimed_minimum": 2,
+      "claimed_candidate_count": 64,
+      "claimed_sequence_count": 1990656,
+      "upper_rivals": [
+        "((*).((...))..)",
+        "((*)..........)"
+      ],
+      "lower_witnesses": [
+        "CGAAACGGCAAAGCACG",
+        "UAAAAUCCAAAAUGCGA"
+      ],
+      "row_number": 1508,
+      "motif_sha256": "a19718cbac81e4e906d5d481a96bb805f0e15e7f3b47d39526c671c383ed0c5d"
+    },
+    {
+      "id": "m1522",
+      "claimed_minimum": 2,
+      "claimed_candidate_count": 34,
+      "claimed_sequence_count": 497664,
+      "upper_rivals": [
+        "((*)..(.(*).).)",
+        "((*)....(*)...)"
+      ],
+      "lower_witnesses": [
+        "ACAAAGGAGUCAAAGCCGU",
+        "ACAAAGGACAAAAAUGCGU"
+      ],
+      "row_number": 1522,
+      "motif_sha256": "4a5334e10713dc43aed2dae81baafaabb457f473f8c907aa78c7a73481a6d2b3"
+    },
+    {
+      "id": "m1528",
+      "claimed_minimum": 4,
+      "claimed_candidate_count": 254,
+      "claimed_sequence_count": 1990656,
+      "upper_rivals": [
+        "(.(..((*).)..))",
+        "(.(((.(*).).)))",
+        "(.(.(((*).))).)",
+        "(.....(*).....)"
+      ],
+      "lower_witnesses": [
+        "AAGACCCAAAGCGAGCU",
+        "GAGUCCCAAAGUGUGCC",
+        "GUGUGCCAAAGAGUCCC",
+        "GCGUGUAAAAUUGUCCC"
+      ],
+      "row_number": 1528,
+      "motif_sha256": "3505e464bab207b3b5445fc1f09fefdf5a78e101166cd6bbcda04b45d945eee2"
+    },
+    {
+      "id": "m1602",
+      "claimed_minimum": 6,
+      "claimed_candidate_count": 132,
+      "claimed_sequence_count": 1327104,
+      "upper_rivals": [
+        "(((.....))..)",
+        "((.((...)).))",
+        "(..((...))..)",
+        "(..((....)).)",
+        "(...........)",
+        "(.(((...))).)"
+      ],
+      "lower_witnesses": [
+        "GGCGCAAAGCCAU",
+        "GGCGCAAUGCCUC",
+        "AUACCAAAGGACU",
+        "GGCGGAAACCCAU",
+        "GGCGAAAAUCCAU",
+        "CCUCCAAAGGGCG"
+      ],
+      "row_number": 1602,
+      "motif_sha256": "24df8cf00591d3aa5b2bc39cd9c2fb9e7d813017c458a0b1791b66f9819bb288"
+    },
+    {
+      "id": "m1616",
+      "claimed_minimum": 3,
+      "claimed_candidate_count": 90,
+      "claimed_sequence_count": 1990656,
+      "upper_rivals": [
+        "(((.(*)))..(*).)",
+        "((..(*)..).(*).)",
+        "(...(*)....(*).)"
+      ],
+      "lower_witnesses": [
+        "GGGUCAAAGCCCGAAAAUAC",
+        "UCCACAAAGGCGAAAAAUAA",
+        "ACCAUAAAGGCGCAAAAUAU",
+        "AGGUCAAAGCACAAAAAUAU"
+      ],
+      "row_number": 1616,
+      "motif_sha256": "bb68e1dd1a32f22630a8086ae3d90a178e1ed96c475326179766383da0f4f325"
+    },
+    {
+      "id": "m1619",
+      "claimed_minimum": 5,
+      "claimed_candidate_count": 273,
+      "claimed_sequence_count": 14155776,
+      "upper_rivals": [
+        "(...(....)...)",
+        "(.(((....)).))",
+        "((((....))..))",
+        "(((.(....).)))",
+        "(.(.........))"
+      ],
+      "lower_witnesses": [
+        "AAGAGGAAACGACU",
+        "GAGGCCUCGGUACC",
+        "GUCUCCUCGGCUGC",
+        "GUCACUCCGGCGGU",
+        "GAGAGGAAAUAGCC"
+      ],
+      "row_number": 1619,
+      "motif_sha256": "c155b4019177643f2d459f621c7977228cbf969c4497c956bb23999aa36948f0"
+    },
+    {
+      "id": "m1626",
+      "claimed_minimum": 2,
+      "claimed_candidate_count": 65,
+      "claimed_sequence_count": 1990656,
+      "upper_rivals": [
+        "(.(*)...(.(*).))",
+        "(.(*).....(*)..)"
+      ],
+      "lower_witnesses": [
+        "UAAAAAUAGUGUCAAAGCCA",
+        "CAAAAAUGGACAAAAAUGCG"
+      ],
+      "row_number": 1626,
+      "motif_sha256": "44bd55795410e67f447c9331124a784486bbd5dbb27bb14736cede387fb54cde"
+    },
+    {
+      "id": "m1629",
+      "claimed_minimum": 3,
+      "claimed_candidate_count": 65,
+      "claimed_sequence_count": 1990656,
+      "upper_rivals": [
+        "((.(*))....(*).)",
+        "((.(*).....(*)))",
+        "(..(*)...(.(*)))"
+      ],
+      "lower_witnesses": [
+        "UGUCAAAGCAUCAUAAAAGA",
+        "AGUAAAAUCAUGUCAAAGCU",
+        "UCAUAAAAGAAGUCAAAGCA"
+      ],
+      "row_number": 1629,
+      "motif_sha256": "c3d3d72f425400d2e39327e2e051c85225698df306b9bb9c45f878d3f5d243dc"
+    },
+    {
+      "id": "m1647",
+      "claimed_minimum": 1,
+      "claimed_candidate_count": 159,
+      "claimed_sequence_count": 1990656,
+      "upper_rivals": [
+        "((.((*).....)))"
+      ],
+      "lower_witnesses": [
+        "GGACGAAACGAAACGCC"
+      ],
+      "row_number": 1647,
+      "motif_sha256": "0946dd02490c926bbbd86336ac1daa11393a975eaafc13eb5c031f2411fad875"
+    },
+    {
+      "id": "m1662",
+      "claimed_minimum": 5,
+      "claimed_candidate_count": 273,
+      "claimed_sequence_count": 14155776,
+      "upper_rivals": [
+        "((.(......).))",
+        "(.((......)).)",
+        "(..((.....)).)",
+        "(..(......)..)",
+        "(............)"
+      ],
+      "lower_witnesses": [
+        "GGACGAAAAAGCUU",
+        "GCUCGAAAAAGGUC",
+        "GGCGGAAAAACCAU",
+        "AGCACAGUGUUCAU",
+        "GGCGAAAAACCCAU"
+      ],
+      "row_number": 1662,
+      "motif_sha256": "4f551d26773a0210792de4bc7f618d6e51caa55ec9289cbc02367b9c5665990c"
+    },
+    {
+      "id": "m1663",
+      "claimed_minimum": 3,
+      "claimed_candidate_count": 254,
+      "claimed_sequence_count": 1990656,
+      "upper_rivals": [
+        "(.....(*).....)",
+        "(..((.(*)).)..)",
+        "(.((.((*)).).))"
+      ],
+      "lower_witnesses": [
+        "GAGGGAGAAACCACACC",
+        "GACCCAUAAAGGCGCGU",
+        "GUCCCUCAAAGGCGCGU"
+      ],
+      "row_number": 1663,
+      "motif_sha256": "358d528d4e324da4d9f9933fe102aea1c9881ad6efa34ea1c1b8989bc1ef49ab"
+    },
+    {
+      "id": "m1664",
+      "claimed_minimum": 3,
+      "claimed_candidate_count": 254,
+      "claimed_sequence_count": 1990656,
+      "upper_rivals": [
+        "(.((..(*)..).))",
+        "(.(..((*).)..))",
+        "(..(.((*).))..)"
+      ],
+      "lower_witnesses": [
+        "AAGGACCAAAGAGCACU",
+        "AAGGCCCAAAGCGCACU",
+        "GACUCGUAAAGACAUGU",
+        "GACCUCAAAAUCGGCGU",
+        "ACGGCGUAAAGACCUCU",
+        "GCGCUCCAAAGCGGUCC"
+      ],
+      "row_number": 1664,
+      "motif_sha256": "4724437859877215f71e1deda5b5db129d49a490d7005bcfb3b153db3c58334f"
+    },
+    {
+      "id": "m1668",
+      "claimed_minimum": 3,
+      "claimed_candidate_count": 92,
+      "claimed_sequence_count": 5308416,
+      "upper_rivals": [
+        "(((....)).(*).)",
+        "(.(....)..(*).)",
+        "(.........(*).)"
+      ],
+      "lower_witnesses": [
+        "GGCCUCGGCCGAAACAC",
+        "UGCCUCGGACGAAACAA",
+        "ACCUAAUGCGGAAACAU"
+      ],
+      "row_number": 1668,
+      "motif_sha256": "d18cd66b1c342fb7ecd3d62245268106868b298d0b394339e28777f11ad289d4"
+    },
+    {
+      "id": "m1680",
+      "claimed_minimum": 3,
+      "claimed_candidate_count": 132,
+      "claimed_sequence_count": 3538944,
+      "upper_rivals": [
+        "(..(.....)..)",
+        "(...........)",
+        "(.(((...))).)"
+      ],
+      "lower_witnesses": [
+        "UCGCAAAGGGAUA",
+        "AAGGAACCGUAAU",
+        "UCGCCAGGGGUUG"
+      ],
+      "row_number": 1680,
+      "motif_sha256": "0226063159819bf97f08c790c10a7e9423b0aea30066e2cd8a016918f2122a25"
+    },
+    {
+      "id": "m1702",
+      "claimed_minimum": 2,
+      "claimed_candidate_count": 159,
+      "claimed_sequence_count": 5308416,
+      "upper_rivals": [
+        "(.(.....(*)..))",
+        "(.(....((*)).))"
+      ],
+      "lower_witnesses": [
+        "GCGCAAAGUAAAGUCCC",
+        "ACACCCCGCAAAGCCUU"
+      ],
+      "row_number": 1702,
+      "motif_sha256": "e3bcee1533e057e497bf1df06b305a9bdc968965140e566a89a2e499646d1c3e"
+    },
+    {
+      "id": "m1704",
+      "claimed_minimum": 1,
+      "claimed_candidate_count": 92,
+      "claimed_sequence_count": 1327104,
+      "upper_rivals": [
+        "((..(*).....))"
+      ],
+      "lower_witnesses": [
+        "AAAAGAAACGAAACUU"
+      ],
+      "row_number": 1704,
+      "motif_sha256": "ac3abae8503d120d7ecc2f879627094ecd4a9329679ec9d59546791bfa314cf5"
+    },
+    {
+      "id": "m1718",
+      "claimed_minimum": 4,
+      "claimed_candidate_count": 126,
+      "claimed_sequence_count": 497664,
+      "upper_rivals": [
+        "(((.((*).).)))",
+        "((..((*).)..))",
+        "((...(*)....))",
+        "((((.(*).)).))"
+      ],
+      "lower_witnesses": [
+        "AGGCGUAAAGACCUCU",
+        "AGGCGUAAAGUCCACU",
+        "AGGCGUAAAGACCAUU",
+        "AGCUCGAAACCGGUCU"
+      ],
+      "row_number": 1718,
+      "motif_sha256": "380a3e7fc535d31bee02308f0a0316b4fb19902e9d66860b32516b09e6197d14"
+    },
+    {
+      "id": "m1740",
+      "claimed_minimum": 4,
+      "claimed_candidate_count": 273,
+      "claimed_sequence_count": 5308416,
+      "upper_rivals": [
+        "(((.......)).)",
+        "((.........).)",
+        "(............)",
+        "(((....))....)"
+      ],
+      "lower_witnesses": [
+        "ACGCAAAGCACGAU",
+        "ACGGAAACCAAGAU",
+        "GGCCAAAGGAACAC",
+        "ACCCAAAGGAAGAU"
+      ],
+      "row_number": 1740,
+      "motif_sha256": "2dfeecb63b4048590d63c5ced859c00c2549989579a2135269803f30c46ede09"
+    },
+    {
+      "id": "m1760",
+      "claimed_minimum": 1,
+      "claimed_candidate_count": 159,
+      "claimed_sequence_count": 1990656,
+      "upper_rivals": [
+        "((.....((*).)))"
+      ],
+      "lower_witnesses": [
+        "UCGAAACGCAAAGACGA"
+      ],
+      "row_number": 1760,
+      "motif_sha256": "af9d8a2585ff34d82660aa0d0da1c4669e046100610e222750464857540da36e"
+    },
+    {
+      "id": "m1780",
+      "claimed_minimum": 1,
+      "claimed_candidate_count": 34,
+      "claimed_sequence_count": 331776,
+      "upper_rivals": [
+        "((.(*).....))"
+      ],
+      "lower_witnesses": [
+        "AGCUAAAGUAAAACU"
+      ],
+      "row_number": 1780,
+      "motif_sha256": "3a32c7b8c982512d48753ba965dd0012fdb8ee27bea2effed90b2ead2028a64f"
+    },
+    {
+      "id": "m1791",
+      "claimed_minimum": 5,
+      "claimed_candidate_count": 132,
+      "claimed_sequence_count": 3538944,
+      "upper_rivals": [
+        "(..((....)).)",
+        "(..(.....)..)",
+        "(((......)).)",
+        "((.(.....).))",
+        "(...........)"
+      ],
+      "lower_witnesses": [
+        "GGCGGAAAACCAU",
+        "ACACGAAAAGGAU",
+        "GGACGAAAAGCUU",
+        "GCCCGAAAAGGUC",
+        "CCAUGAACGGGCG"
+      ],
+      "row_number": 1791,
+      "motif_sha256": "0eae6acf13321c47f709a78afd47ce1dcab33a7720b2da5cd40a59fae76563c6"
+    },
+    {
+      "id": "m1797",
+      "claimed_minimum": 1,
+      "claimed_candidate_count": 132,
+      "claimed_sequence_count": 3538944,
+      "upper_rivals": [
+        "(.(........))"
+      ],
+      "lower_witnesses": [
+        "AAGAAUAAAAACU"
+      ],
+      "row_number": 1797,
+      "motif_sha256": "35e6ae34748b5cdf064b679b726db1ab7dfe55f58514bcbf9f57a5662364aecd"
+    },
+    {
+      "id": "m1802",
+      "claimed_minimum": 3,
+      "claimed_candidate_count": 254,
+      "claimed_sequence_count": 1990656,
+      "upper_rivals": [
+        "((..(.(*))..).)",
+        "(.....(*).....)",
+        "((.((.(*)).).))"
+      ],
+      "lower_witnesses": [
+        "GGACCAUAAAGGCGCUU",
+        "GGCGCACAAAGGUCCAC",
+        "GGCGCUUAAAGGACCAU",
+        "GGCGGAAAAAUCACCUC",
+        "ACACCUCAAAGGCGGAU",
+        "GGUCCUCAAAGGCGCUC"
+      ],
+      "row_number": 1802,
+      "motif_sha256": "f92bef04918640e9e283e25924636486abf50a6cf9c8cf27857e61377a4b1283"
+    },
+    {
+      "id": "m1803",
+      "claimed_minimum": 2,
+      "claimed_candidate_count": 132,
+      "claimed_sequence_count": 3538944,
+      "upper_rivals": [
+        "(...((....)))",
+        "(...........)"
+      ],
+      "lower_witnesses": [
+        "UUAGGCAAAGGCA",
+        "GAAUGCAAUGGAU"
+      ],
+      "row_number": 1803,
+      "motif_sha256": "ebd77871ac6a29f0e81efa3e063e7634b2dfba8f4d302c423e4648a463900e22"
+    }
+  ]
+}
