@@ -30,8 +30,8 @@
       "sha256": "54cff18a3c7a7730a956f1a5d5aa3bfcfd5988d48ff97163a680dadeec0d79dc"
     },
     "VERIFICATION-RECORD.md": {
-      "bytes": 3315,
-      "sha256": "d2caf72e816e38236408b1676f6761922ebd00c10896c6934f75dc501722541b"
+      "bytes": 4097,
+      "sha256": "450d97d5117feefaa9abe62b3716d4f58b2697531d814e41f26d7c508265372d"
     },
     "checkers/geometry.py": {
       "bytes": 3146,
