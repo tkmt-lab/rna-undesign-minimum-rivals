@@ -1,0 +1,41 @@
+--- report-B-v1-en.tex	2026-11-05 14:29:56.673551871 +0900
++++ report-B-v1.1-en.tex	2026-11-05 15:32:55.382822333 +0900
+@@ -9,11 +9,11 @@
+ \setlength{\parskip}{5pt}
+ \title{Minimum rival covers for 108 fixed\\RNA-Undesign motif instances}
+ \author{Tatsuhiko Takimoto\\\small Independent researcher}
+-\date{Version 1, November 2026}
++\date{Version 1.1, November 2026}
+ \begin{document}
+ \maketitle
+ \begin{abstract}
+-A collection of rival RNA structures can certify that a target is never the unique minimum-energy structure. We determine the smallest size of such a collection for 108 fixed motif instances from RNA-Undesign. With fixed boundaries and ViennaRNA's Turner 2004 model at 37\,$^\circ$C, the minima are between one and six, with a sum of 310 over the instances. Each optimum has an upper cover and a finite lower witness set. The accompanying checker reconstructs the candidate structures from a stated grammar, checks lower bounds, and exhaustively verifies upper coverage; the certificates and a complete check record are fixed by SHA-256 in Section~\ref{sec:repro}. These are finite, model-specific results; they do not assert a bound for arbitrary RNA.
++A collection of rival RNA structures can certify that a target is never the unique minimum-energy structure. We determine the smallest size of such a collection for 108 fixed motif instances from RNA-Undesign. With fixed boundaries and ViennaRNA's Turner 2004 model at 37\,$^\circ$C, the minima are between one and six, with a sum of 310 over the instances. Each optimum has an upper cover and a finite lower witness set. The accompanying checker reconstructs the candidate structures from a stated grammar, checks lower bounds, and exhaustively verifies upper coverage; the certificates, the checker and the stored output of one complete check run are identified by SHA-256 in Section~\ref{sec:repro}. These are finite, model-specific results; they do not assert a bound for arbitrary RNA.
+ \end{abstract}
+ \section{Instances, boundaries and energy model}
+ The source is the \href{https://raw.githubusercontent.com/shanry/RNA-Undesign/8a8de22/data/motifs_maxlen14_no_external/results.uniq.csv}{pinned RNA-Undesign CSV}, at \path{data/motifs_maxlen14_no_external/results.uniq.csv} in Git commit \texttt{8a8de22}. Of its 1,805 data rows, the 108 rows with \texttt{N\_Rival}\,$\ge2$ are selected. The row identifiers in Tables~\ref{tab:first}--\ref{tab:second} are one-based data-row numbers, excluding the header. RNA-Undesign supplies the motifs and the rival-based framework~\cite{rigende,fastmotif}; the task here is to minimize the number of rivals over an explicitly specified candidate set.
+@@ -66,20 +66,22 @@
+ \end{center}
+ The sum of the instance-specific minima is 310. It is not a claim of 310 distinct rivals forming one cover for all motifs. The lower witness sets contain one to six sequences; their size and the certificate byte size are not minimized. The original CSV's rival counts are outputs of its search procedure, not minimum-cardinality claims being corrected here.
+ \section{Reproduction and scope}\label{sec:repro}
+-The certificates and checker are in version 1.0.0 of the package at\\ \url{https://github.com/tkmt-lab/rna-undesign-minimum-rivals} (Git tag \texttt{v1.0.0}); the archived copy of that release and its DOI are linked from the repository page. The files on which the results depend are fixed by SHA-256:
++The certificates and checker are in version 1.0.0 of the package at\\ \url{https://github.com/tkmt-lab/rna-undesign-minimum-rivals} (Git tag \texttt{v1.0.0}); the archived copy of that release and its DOI are linked from the repository page. The files on which the results depend, and the two files recording the complete check run described below, are identified by SHA-256:
+ \begin{center}\footnotesize
+ \begin{tabular}{@{}ll@{}}
+ \path{data/certificates.json} & \texttt{c0e7ced0ea783467fef0927be667cb62a819a3a83a03fa35378ddd700e4c26b1}\\
+ \path{data/results.csv} & \texttt{74bce882a58445fef972dc603b5a0245a3a5d29729a6a63a959234b2ebfffcc4}\\
+ \path{checkers/geometry.py} & \texttt{94d83598e0842c74a9d79b3581aad5a526cb9e3f5252a995057cc3e5aa623e0d}\\
+ \path{checkers/verify.py} & \texttt{c01320dbe263a90ec37b0bed003839c993508d1f5ace8415c07d1d231a9414a7}\\
++\path{validation/full-check.json} & \texttt{53be272ff0ef1ba38d924b5b8e1fd71608c398e76d72cd36d33e85759ff76977}\\
++\path{validation/full-check-meta.json} & \texttt{427e08c3a6f68313d07cb402956e8748828858e9e3727381c989d613a7c444b7}\\
+ \end{tabular}
+ \end{center}
+ For each instance the certificate file gives the $k$ upper rivals $U_m$ and the lower witnesses $W_m$. The package also contains the source-fetch tool. The original CSV and its motif strings are not redistributed. A user obtains the pinned CSV separately; the tool accepts it only if its SHA-256 is
+ \begin{center}\small\texttt{a06d6cc495c36c50b4292e260ebc89d54d3dbd422b99fd2ebfae66431ff59041}.\end{center}
+ Each certificate includes the SHA-256 of the exact decoded \texttt{Motif} field, encoded as UTF-8 without an added newline or normalization. Stored rivals use the compressed boundary notation; witness sequences use the expanded coordinates with fixed AAA. The checker requires the exact 108 selected row identifiers before reconstructing the motifs.
+ 
+-The default smoke run checks all candidate counts, sequence counts and lower certificates, and exhaustively checks upper covers for m0081, m0335 and m1780, totaling 539,136 sequences. The \texttt{--full} option checks every upper cover and all 300,119,040 sequences. The smoke run alone is not a full upper-coverage verification. The output of a complete \texttt{--full} run of the packaged checker on these files is stored in \path{validation/full-check.json}; it lists, for every instance, the lower-bound result and the number of sequences checked for the upper cover. The packaged checker derives from the research-side certificate grammar; it is not a new blind independent review. The \path{VERIFICATION-RECORD.md} file separates an earlier complete certificate check by a separately written checker from the package checks and records evaluator dependencies.
++The default smoke run checks all candidate counts, sequence counts and lower certificates, and exhaustively checks upper covers for m0081, m0335 and m1780, totaling 539,136 sequences. The \texttt{--full} option checks every upper cover and all 300,119,040 sequences. The smoke run alone is not a full upper-coverage verification. The output of a complete \texttt{--full} run of the packaged checker on these files is stored in \path{validation/full-check.json}; it lists, for every instance, the lower-bound result and the number of sequences checked for the upper cover, and \path{validation/full-check-meta.json} records the SHA-256 of each input file of that run. A hash fixes these record files; it does not by itself prove that the run took place, which a reader confirms by rerunning \texttt{--full}. The packaged checker derives from the research-side certificate grammar; it is not a new blind independent review. The \path{VERIFICATION-RECORD.md} file separates an earlier complete certificate check by a separately written checker from the package checks and records evaluator dependencies.
+ 
+ The mathematical claim concerns this fixed sequence space, candidate grammar, boundary treatment and parameter set. It does not cover unconstrained rival structures, other thermodynamic parameters, pseudoknots, measured molecular behavior or all RNA motifs. In particular, we do not claim that the minimum with fixed outer and boundary pairs equals a minimum over unconstrained rival structures, and we have not tested robustness to boundary interiors other than the three fixed A letters. Computational certificate checks establish the stated finite claims relative to their implementation and energy evaluator; the software is not formally verified.
+ 
