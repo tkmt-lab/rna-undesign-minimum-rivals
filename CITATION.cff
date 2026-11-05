@@ -3,7 +3,7 @@
   "message": "Cite this draft and the original RNA-Undesign papers and data.",
   "title": "Minimum rival covers for 108 RNA-Undesign motifs",
   "type": "dataset",
-  "version": "0.0.0-draft",
+  "version": "1.0.0",
   "authors": [
     {
       "family-names": "Takimoto",

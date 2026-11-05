@@ -18,6 +18,7 @@ jobs:
       - run: python -B tools/fetch_source.py
       - run: nice -n 10 python -B checkers/verify.py --output work/checks/ci-smoke.json
       - run: nice -n 10 python -B checkers/negative_controls.py
+      - run: python -B checkers/check_full_record.py
       - uses: actions/upload-artifact@v4
         if: always()
         with:

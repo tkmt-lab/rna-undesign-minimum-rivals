@@ -45,18 +45,19 @@ python -B checkers/verify.py --full --output work/checks/full.json
 python -B checkers/verify.py --case m0025 --output work/checks/m0025.json
 ```
 
-The new Python full check may take about an hour based on the smoke measurement. It runs in one process and does not use the search implementation. A failure reports the row and, for a missed upper cover, a counterexample sequence. Optimized Python (`-O`) is refused. CI is configured for smoke and negative controls, not the full enumeration.
+A complete run took about 55 minutes in one process on the assembly machine (Apple silicon); its record is in `validation/`. It runs in one process and does not use the search implementation. A failure reports the row and, for a missed upper cover, a counterexample sequence. Optimized Python (`-O`) is refused. CI is configured for smoke, negative controls and the stored-record check, not the full enumeration.
 
 ## Files and verification boundary
 
 - `data/results.csv`: row IDs, counts, minima and motif digests.
 - `data/certificates.json`: laboratory-computed rivals and witness sequences, with the same row IDs and digests. See [data/README.md](data/README.md) for encodings.
 - `checkers/`: candidate grammar, integer-energy adapter and certificate checks. No search code is imported.
-- `paper/report-B-v0-en.pdf` and TeX: short mathematical report.
+- `paper/report-B-v1-en.pdf` and TeX: short mathematical report, Version 1 (current). Version 0 and the exact diff `paper/v0-to-v1.diff` are kept.
+- `validation/full-check.json`, `validation/full-check-meta.json`: output of one complete `--full` run of this checker on these files, with the SHA-256 of every input file. `checkers/check_full_record.py` confirms that the record covers all 108 rows and 300,119,040 sequences and that the files have not changed since.
 - `VERIFICATION-RECORD.md`: previous independent checks and the scope of this package's assembly checks.
 - `SOURCE-PERMISSIONS.md`: source-data permission findings and the non-bundling decision.
 
-The earlier full independent certificate check covered 108/108 cases and all 300,119,040 sequences, using ViennaRNA 2.7.2. This package's checker was subsequently assembled from the research-side certificate grammar, so its smoke result is not a new blind independent review. The code and thermodynamic model are not formally verified, and the report has not undergone human peer review.
+The earlier full independent certificate check covered 108/108 cases and all 300,119,040 sequences, using ViennaRNA 2.7.2. This package's checker was subsequently assembled from the research-side certificate grammar, so its runs, including the stored complete run, are not a new blind independent review. The code and thermodynamic model are not formally verified, and the report has not undergone human peer review.
 
 These results concern the fixed candidate and sequence spaces above. They make no claim for unrestricted RNA, other thermodynamic parameters, pseudoknots, experimental molecules, or being the first result of this kind.
 

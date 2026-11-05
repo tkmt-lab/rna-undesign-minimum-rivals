@@ -1,0 +1,23 @@
+{
+  "description": "Metadata of one complete run of checkers/verify.py --full; the output is validation/full-check.json.",
+  "command": "python -B checkers/verify.py --full --output work/checks/full.json",
+  "package_commit": "ff610dface6d8cc17c59182a64e18f95ccd3a3e8",
+  "inputs_sha256": {
+    "data/certificates.json": "c0e7ced0ea783467fef0927be667cb62a819a3a83a03fa35378ddd700e4c26b1",
+    "data/results.csv": "74bce882a58445fef972dc603b5a0245a3a5d29729a6a63a959234b2ebfffcc4",
+    "checkers/geometry.py": "94d83598e0842c74a9d79b3581aad5a526cb9e3f5252a995057cc3e5aa623e0d",
+    "checkers/verify.py": "c01320dbe263a90ec37b0bed003839c993508d1f5ace8415c07d1d231a9414a7",
+    "requirements.txt": "95b6ccf7ecf0d080190739a5c380ee8289933bc1e9f08245a161936eaea7421f"
+  },
+  "source_csv_sha256": "a06d6cc495c36c50b4292e260ebc89d54d3dbd422b99fd2ebfae66431ff59041",
+  "started": "2026-11-05T14:29:59+09:00",
+  "python": "3.11.14",
+  "viennarna": "2.7.2",
+  "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+  "processes": 1,
+  "nice": 10,
+  "output_sha256": "53be272ff0ef1ba38d924b5b8e1fd71608c398e76d72cd36d33e85759ff76977",
+  "note": "Run by the laboratory with this package's checker; not a blind independent review.",
+  "finished": "2026-11-05T15:25:36+09:00",
+  "elapsed_seconds": 3278.35
+}

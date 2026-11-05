@@ -1,0 +1,216 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[margin=20mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,booktabs,array,hyperref,microtype}
+\hypersetup{colorlinks=true,urlcolor=blue,citecolor=blue,linkcolor=blue}
+\newtheorem{proposition}{Proposition}
+\newcommand{\Rset}{\mathcal R}
+\newcommand{\Xset}{\mathcal X}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{5pt}
+\title{Minimum rival covers for 108 fixed\\RNA-Undesign motif instances}
+\author{Tatsuhiko Takimoto\\\small Independent researcher}
+\date{Version 1, November 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+A collection of rival RNA structures can certify that a target is never the unique minimum-energy structure. We determine the smallest size of such a collection for 108 fixed motif instances from RNA-Undesign. With fixed boundaries and ViennaRNA's Turner 2004 model at 37\,$^\circ$C, the minima are between one and six, with a sum of 310 over the instances. Each optimum has an upper cover and a finite lower witness set. The accompanying checker reconstructs the candidate structures from a stated grammar, checks lower bounds, and exhaustively verifies upper coverage; the certificates and a complete check record are fixed by SHA-256 in Section~\ref{sec:repro}. These are finite, model-specific results; they do not assert a bound for arbitrary RNA.
+\end{abstract}
+\section{Instances, boundaries and energy model}
+The source is the \href{https://raw.githubusercontent.com/shanry/RNA-Undesign/8a8de22/data/motifs_maxlen14_no_external/results.uniq.csv}{pinned RNA-Undesign CSV}, at \path{data/motifs_maxlen14_no_external/results.uniq.csv} in Git commit \texttt{8a8de22}. Of its 1,805 data rows, the 108 rows with \texttt{N\_Rival}\,$\ge2$ are selected. The row identifiers in Tables~\ref{tab:first}--\ref{tab:second} are one-based data-row numbers, excluding the header. RNA-Undesign supplies the motifs and the rival-based framework~\cite{rigende,fastmotif}; the task here is to minimize the number of rivals over an explicitly specified candidate set.
+
+A motif has an outer base pair and zero or more boundary pairs denoted by \texttt{(*)}. Each boundary is an indivisible closed child. For energy evaluation, it is replaced by a hairpin with structure \texttt{(...)} and three fixed internal A letters. The outer and boundary pairs are preserved in every candidate. The internal A letters are never available as new pairing endpoints.
+
+Let $\Xset(m)$ contain all sequences compatible with the target $m$: every target pair, including outer and boundary pairs, allows AU, UA, GC, CG, GU or UG; every other unfixed unpaired position allows A, C, G or U. Thus, with $p$ target pairs and $u$ unfixed unpaired positions,
+\[
+ |\Xset(m)|=6^p4^u.
+\]
+\textbf{Candidate set.} Write the motif in compressed form: a string $t=t_0t_1\cdots t_{n-1}$ over the symbols \texttt{(}, \texttt{)}, \texttt{.} and $\ast$, where each boundary \texttt{(*)} becomes the single atomic symbol $\ast$. The positions $0$ and $n-1$ form the outer pair. A candidate is a string $s$ of the same length such that
+\begin{enumerate}\itemsep0pt
+\item $s_0=\texttt{(}$ and $s_{n-1}=\texttt{)}$, and these two positions pair with each other (the outer pair is preserved);
+\item $s_i=\ast$ exactly when $t_i=\ast$ (every boundary is preserved and is never split; its three internal A letters are not positions of $s$, so they never pair);
+\item the remaining symbols of $s$ are \texttt{(}, \texttt{)} or \texttt{.} and form a balanced, hence noncrossing, bracket structure;
+\item every pair of $s$, including the outer pair, encloses at least one directly nested child or at least three directly enclosed \texttt{.} symbols. A direct child is a pair of $s$ or a $\ast$ that is not inside another pair of $s$ within this loop.
+\end{enumerate}
+Then $\Rset(m)$ is the set of such strings other than $t$. New pairs may enclose one or more boundaries, so the containment of boundaries inside other pairs may change; only the outer pair and the boundary pairs themselves are fixed. Rule~4 counts hairpin length in compressed coordinates: a $\ast$ is a child, not three unpaired letters. For example, the synthetic motif \texttt{(.(*)...)} has compressed form \texttt{(.$\ast$...)} and exactly three candidates, \texttt{(($\ast$)..)}, \texttt{(($\ast$.).)} and \texttt{(($\ast$..))}; the string \texttt{(.$\ast$(.))} is excluded by Rule~4. For energy evaluation every $\ast$ is expanded back to \texttt{(...)} with internal letters AAA. The checker enumerates $\Rset(m)$ with a stack automaton implementing exactly Rules~1--4; its candidate counts are those in Tables~\ref{tab:first}--\ref{tab:second}.
+
+Energy $E(x,r)$ is evaluated using ViennaRNA 2.7.2~\cite{vienna,vienna2}, with the Turner 2004 parameter set that ships with that version, loaded by \texttt{RNA.params\_load\_RNA\_Turner2004()}. The model details are set explicitly to temperature 37\,$^\circ$C, \texttt{dangles=2}, \texttt{special\_hp=1}, \texttt{noLP=0}, \texttt{noGU=0}, \texttt{noGUclosure=0}, \texttt{min\_loop\_size=3}, \texttt{circ=0}, \texttt{gquad=0}, \texttt{logML=0}, salt 1.021\,M and \texttt{energy\_set=0}; all other settings are the ViennaRNA 2.7.2 defaults. The checker refuses to run if the installed version or any of these values differs. The integer \texttt{eval\_structure\_pt} API reports units of 0.01\,kcal/mol. No floating-point tolerance is used in the cover comparison.
+\section{The finite minimum-cover claim}
+A rival $r\in\Rset(m)$ covers $x\in\Xset(m)$ if all its pairs are compatible with $x$ and
+\[
+ E(x,r)\le E(x,m).
+\]
+Ties count: this prevents $m$ from being the \emph{unique} minimum-free-energy structure. The quantity determined is
+\[
+ k^*(m)=\min\bigl\{|C|:C\subseteq\Rset(m),\ \forall x\in\Xset(m)\ \exists r\in C:\ r\text{ covers }x\bigr\}.
+\]
+An upper certificate is a list $U_m$ of $k$ distinct candidates covering all of $\Xset(m)$. A lower certificate is a nonempty finite set $W_m\subseteq\Xset(m)$ such that no set of at most $k-1$ candidates covers $W_m$.
+
+\begin{proposition}
+If these upper and lower certificates hold, then $k^*(m)=k$.
+\end{proposition}
+\begin{proof}
+The upper certificate gives $k^*(m)\le k$. A cover of $\Xset(m)$ also covers its subset $W_m$, so the lower certificate gives $k^*(m)\ge k$. For $k=1$, the nonempty sequence space already excludes an empty cover.
+\end{proof}
+
+For a lower check, enumerate all candidates and evaluate their coverage on $W_m$. Represent each coverage set by a bit mask. Let $S_0=\{0\}$ and $S_d=S_{d-1}\cup\{a\vee c: a\in S_{d-1},\ c$ a candidate mask$\}$, so earlier states, including $0$, are kept. Then $S_d$ is exactly the set of unions of at most $d$ candidate masks. Absence of the full witness mask from $S_{k-1}$ proves the lower bound. Reusing a candidate does not change a union, so the procedure includes every subset of at most $k-1$ candidates. No optimization solver or search implementation is required.
+
+For an upper check, enumerate all $6^p4^u$ sequences and require at least one compatible rival in $U_m$ with energy no larger than the target. The candidates are regenerated by a stack grammar that treats boundaries atomically; the certificates do not supply a purportedly complete candidate list.
+
+\section{Results}
+The 108 minima and the candidate and sequence counts are listed in Tables~\ref{tab:first}--\ref{tab:second}. There are 12,235 candidates in total across the instance-specific candidate sets, and 300,119,040 sequence assignments. The distribution is
+\begin{center}
+\begin{tabular}{lrrrrrr}\toprule
+Minimum $k^*$ &1&2&3&4&5&6\\\midrule
+Instances &10&31&40&19&6&2\\\bottomrule
+\end{tabular}
+\end{center}
+The sum of the instance-specific minima is 310. It is not a claim of 310 distinct rivals forming one cover for all motifs. The lower witness sets contain one to six sequences; their size and the certificate byte size are not minimized. The original CSV's rival counts are outputs of its search procedure, not minimum-cardinality claims being corrected here.
+\section{Reproduction and scope}\label{sec:repro}
+The certificates and checker are in version 1.0.0 of the package at\\ \url{https://github.com/tkmt-lab/rna-undesign-minimum-rivals} (Git tag \texttt{v1.0.0}); the archived copy of that release and its DOI are linked from the repository page. The files on which the results depend are fixed by SHA-256:
+\begin{center}\footnotesize
+\begin{tabular}{@{}ll@{}}
+\path{data/certificates.json} & \texttt{c0e7ced0ea783467fef0927be667cb62a819a3a83a03fa35378ddd700e4c26b1}\\
+\path{data/results.csv} & \texttt{74bce882a58445fef972dc603b5a0245a3a5d29729a6a63a959234b2ebfffcc4}\\
+\path{checkers/geometry.py} & \texttt{94d83598e0842c74a9d79b3581aad5a526cb9e3f5252a995057cc3e5aa623e0d}\\
+\path{checkers/verify.py} & \texttt{c01320dbe263a90ec37b0bed003839c993508d1f5ace8415c07d1d231a9414a7}\\
+\end{tabular}
+\end{center}
+For each instance the certificate file gives the $k$ upper rivals $U_m$ and the lower witnesses $W_m$. The package also contains the source-fetch tool. The original CSV and its motif strings are not redistributed. A user obtains the pinned CSV separately; the tool accepts it only if its SHA-256 is
+\begin{center}\small\texttt{a06d6cc495c36c50b4292e260ebc89d54d3dbd422b99fd2ebfae66431ff59041}.\end{center}
+Each certificate includes the SHA-256 of the exact decoded \texttt{Motif} field, encoded as UTF-8 without an added newline or normalization. Stored rivals use the compressed boundary notation; witness sequences use the expanded coordinates with fixed AAA. The checker requires the exact 108 selected row identifiers before reconstructing the motifs.
+
+The default smoke run checks all candidate counts, sequence counts and lower certificates, and exhaustively checks upper covers for m0081, m0335 and m1780, totaling 539,136 sequences. The \texttt{--full} option checks every upper cover and all 300,119,040 sequences. The smoke run alone is not a full upper-coverage verification. The output of a complete \texttt{--full} run of the packaged checker on these files is stored in \path{validation/full-check.json}; it lists, for every instance, the lower-bound result and the number of sequences checked for the upper cover. The packaged checker derives from the research-side certificate grammar; it is not a new blind independent review. The \path{VERIFICATION-RECORD.md} file separates an earlier complete certificate check by a separately written checker from the package checks and records evaluator dependencies.
+
+The mathematical claim concerns this fixed sequence space, candidate grammar, boundary treatment and parameter set. It does not cover unconstrained rival structures, other thermodynamic parameters, pseudoknots, measured molecular behavior or all RNA motifs. In particular, we do not claim that the minimum with fixed outer and boundary pairs equals a minimum over unconstrained rival structures, and we have not tested robustness to boundary interiors other than the three fixed A letters. Computational certificate checks establish the stated finite claims relative to their implementation and energy evaluator; the software is not formally verified.
+
+Rival-based certificates of undesignability and the enumeration of minimal undesignable motifs are prior work~\cite{rigende,fastmotif,journal}. Minimality under inclusion of motifs is different from the minimum \emph{number of rivals} for a fixed motif. Our contribution is the fixed collection of optimum values and their upper and lower certificates. No priority claim is made. A possible next question is how these minima change under a separately specified boundary or parameter change; the present certificates do not answer it.
+
+AI systems assisted with the calculations, certificate checks, literature comparison, code and writing. Tatsuhiko Takimoto is responsible for the report. This draft has not undergone human peer review.
+
+\begin{thebibliography}{9}\small
+\bibitem{rigende} T. Zhou, W. Y. Tang, D. H. Mathews and L. Huang.
+Undesignable RNA Structure Identification via Rival Structure Generation and Structure Decomposition. RECOMB 2024. \href{https://arxiv.org/abs/2311.08339}{arXiv:2311.08339}.
+\bibitem{fastmotif} T. Zhou, A. Malik, W. Y. Tang, D. H. Mathews and L. Huang.
+Scalable and Interpretable Identification of Minimal Undesignable RNA Structure Motifs with Rotational Invariance. RECOMB 2025. \href{https://arxiv.org/abs/2402.17206}{arXiv:2402.17206}.
+\bibitem{journal} T. Zhou, A. Malik, W. Y. Tang, D. H. Mathews and L. Huang.
+Theory, Algorithms, and Applications for Identification of Undesignable RNA Secondary Structures and Motifs. J. Comput. Biol. 33(1):134--167, 2026. \href{https://doi.org/10.1177/15578666251398551}{doi:10.1177/15578666251398551}.
+\bibitem{vienna} R. Lorenz et al. ViennaRNA Package 2.0. Algorithms Mol. Biol. 6:26, 2011. \href{https://doi.org/10.1186/1748-7188-6-26}{doi:10.1186/1748-7188-6-26}.
+\bibitem{vienna2} ViennaRNA Package, version 2.7.2. Python distribution \texttt{ViennaRNA==2.7.2}, \url{https://pypi.org/project/ViennaRNA/2.7.2/}.
+\end{thebibliography}
+\newpage\section*{Instance results (1/2)}
+\begin{table}[h!]\centering\small\renewcommand{\arraystretch}{0.91}
+\begin{tabular}{lrrr}\toprule ID & $k^*$ & Candidates & Sequences\\\midrule
+m0025 & 3 & 64 & 5,308,416\\
+m0039 & 4 & 24 & 124,416\\
+m0044 & 3 & 56 & 1,990,656\\
+m0081 & 4 & 34 & 82,944\\
+m0137 & 2 & 61 & 3,538,944\\
+m0139 & 2 & 159 & 5,308,416\\
+m0144 & 3 & 40 & 497,664\\
+m0155 & 1 & 118 & 5,308,416\\
+m0208 & 5 & 273 & 14,155,776\\
+m0215 & 2 & 118 & 14,155,776\\
+m0232 & 2 & 273 & 14,155,776\\
+m0237 & 1 & 273 & 14,155,776\\
+m0254 & 2 & 92 & 1,327,104\\
+m0265 & 4 & 92 & 1,327,104\\
+m0295 & 6 & 110 & 1,990,656\\
+m0314 & 2 & 90 & 1,990,656\\
+m0317 & 3 & 49 & 497,664\\
+m0335 & 2 & 14 & 124,416\\
+m0353 & 3 & 19 & 124,416\\
+m0401 & 4 & 126 & 497,664\\
+m0420 & 4 & 159 & 5,308,416\\
+m0470 & 2 & 65 & 746,496\\
+m0489 & 2 & 96 & 1,990,656\\
+m0501 & 2 & 69 & 1,990,656\\
+m0525 & 2 & 56 & 1,990,656\\
+m0562 & 3 & 56 & 1,990,656\\
+m0564 & 2 & 21 & 497,664\\
+m0569 & 3 & 34 & 746,496\\
+m0571 & 4 & 96 & 746,496\\
+m0618 & 3 & 110 & 1,990,656\\
+m0624 & 2 & 21 & 221,184\\
+m0630 & 3 & 69 & 746,496\\
+m0641 & 4 & 220 & 5,308,416\\
+m0653 & 3 & 90 & 1,990,656\\
+m0656 & 3 & 34 & 497,664\\
+m0664 & 3 & 254 & 1,990,656\\
+m0682 & 3 & 65 & 1,990,656\\
+m0692 & 3 & 34 & 497,664\\
+m0695 & 3 & 19 & 746,496\\
+m0716 & 3 & 90 & 746,496\\
+m0717 & 3 & 110 & 1,990,656\\
+m0719 & 4 & 126 & 497,664\\
+m0732 & 4 & 220 & 1,990,656\\
+m0756 & 3 & 69 & 884,736\\
+m0779 & 4 & 34 & 82,944\\
+m0812 & 2 & 64 & 5,308,416\\
+m0820 & 3 & 90 & 1,990,656\\
+m0839 & 3 & 159 & 5,308,416\\
+m0855 & 3 & 110 & 746,496\\
+m0857 & 2 & 92 & 1,327,104\\
+m0866 & 3 & 254 & 5,308,416\\
+m0885 & 1 & 159 & 1,990,656\\
+m0916 & 2 & 56 & 746,496\\
+m0920 & 2 & 40 & 497,664\\
+\bottomrule\end{tabular}\caption{First 54 selected source rows.}\label{tab:first}\end{table}
+\newpage\section*{Instance results (2/2)}
+\begin{table}[h!]\centering\small\renewcommand{\arraystretch}{0.91}
+\begin{tabular}{lrrr}\toprule ID & $k^*$ & Candidates & Sequences\\\midrule
+m0941 & 1 & 92 & 5,308,416\\
+m0968 & 2 & 14 & 746,496\\
+m0973 & 2 & 34 & 1,990,656\\
+m0998 & 2 & 159 & 5,308,416\\
+m1006 & 3 & 118 & 1,990,656\\
+m1016 & 4 & 126 & 1,327,104\\
+m1022 & 2 & 65 & 1,990,656\\
+m1053 & 3 & 92 & 5,308,416\\
+m1056 & 2 & 118 & 5,308,416\\
+m1067 & 4 & 220 & 1,990,656\\
+m1075 & 2 & 126 & 1,327,104\\
+m1082 & 1 & 61 & 1,327,104\\
+m1086 & 4 & 110 & 746,496\\
+m1099 & 5 & 126 & 1,327,104\\
+m1142 & 3 & 90 & 746,496\\
+m1180 & 4 & 126 & 497,664\\
+m1208 & 3 & 69 & 1,990,656\\
+m1213 & 4 & 220 & 1,990,656\\
+m1218 & 4 & 90 & 746,496\\
+m1220 & 2 & 90 & 746,496\\
+m1230 & 3 & 24 & 124,416\\
+m1271 & 2 & 159 & 5,308,416\\
+m1293 & 3 & 110 & 1,990,656\\
+m1385 & 5 & 273 & 5,308,416\\
+m1401 & 3 & 118 & 1,990,656\\
+m1419 & 3 & 96 & 746,496\\
+m1448 & 3 & 90 & 746,496\\
+m1473 & 3 & 96 & 1,990,656\\
+m1491 & 3 & 45 & 3,538,944\\
+m1495 & 2 & 118 & 5,308,416\\
+m1508 & 2 & 64 & 1,990,656\\
+m1522 & 2 & 34 & 497,664\\
+m1528 & 4 & 254 & 1,990,656\\
+m1602 & 6 & 132 & 1,327,104\\
+m1616 & 3 & 90 & 1,990,656\\
+m1619 & 5 & 273 & 14,155,776\\
+m1626 & 2 & 65 & 1,990,656\\
+m1629 & 3 & 65 & 1,990,656\\
+m1647 & 1 & 159 & 1,990,656\\
+m1662 & 5 & 273 & 14,155,776\\
+m1663 & 3 & 254 & 1,990,656\\
+m1664 & 3 & 254 & 1,990,656\\
+m1668 & 3 & 92 & 5,308,416\\
+m1680 & 3 & 132 & 3,538,944\\
+m1702 & 2 & 159 & 5,308,416\\
+m1704 & 1 & 92 & 1,327,104\\
+m1718 & 4 & 126 & 497,664\\
+m1740 & 4 & 273 & 5,308,416\\
+m1760 & 1 & 159 & 1,990,656\\
+m1780 & 1 & 34 & 331,776\\
+m1791 & 5 & 132 & 3,538,944\\
+m1797 & 1 & 132 & 3,538,944\\
+m1802 & 3 & 254 & 1,990,656\\
+m1803 & 2 & 132 & 3,538,944\\
+\bottomrule\end{tabular}\caption{Remaining 54 selected source rows.}\label{tab:second}\end{table}
+\end{document}
