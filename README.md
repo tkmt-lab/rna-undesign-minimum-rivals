@@ -1,8 +1,8 @@
 # Minimum rival covers for 108 RNA-Undesign motifs
 
-Package **v1.0.0 — 2026-11-11**. [Repository and archive/DOI links](https://github.com/tkmt-lab/rna-undesign-minimum-rivals).
+Package **v1.0.0 — 2026-11-11**. [Repository](https://github.com/tkmt-lab/rna-undesign-minimum-rivals). DOI: none recorded.
 
-For 108 fixed RNA-Undesign motif instances, the minimum number of rival structures needed to rule out a unique minimum-energy target ranges from one to six.
+For 108 fixed RNA-Undesign motif instances, the minimum number of rival structures needed to rule out a unique minimum-energy target for every target-compatible sequence ranges from one to six.
 The values apply to fixed boundaries, fixed AAA boundary interiors and the candidate set below, using ViennaRNA 2.7.2 with Turner 2004 parameters at 37 C.
 Researchers studying RNA undesignability can use the upper-cover and lower-witness certificates to check these finite optima.
 

@@ -10,8 +10,8 @@
       "sha256": "e76d10ae5abeebb7cb01276b9e8b61d0b2bd33e884b5a5e3d2692fe811d8dc97"
     },
     ".zenodo.json": {
-      "bytes": 928,
-      "sha256": "1617c34dbdfbea9c719dc86b084f93972a3844576367f30f4a4a185bced36c20"
+      "bytes": 965,
+      "sha256": "1536eccdf6938765a9efb78592b4f0c4c33b98757407727848e75c6be888bfee"
     },
     "AGENTS.md": {
       "bytes": 1124,
@@ -30,16 +30,16 @@
       "sha256": "aef72f226321e4017157e51c9f952e976f390fbb752e03eaf290267ae8edfc39"
     },
     "README.md": {
-      "bytes": 12414,
-      "sha256": "3850e9e74dc1c52c5b18b91d3e29b66b3e8414c72f2d9349ca5c1ebf71f169c7"
+      "bytes": 12449,
+      "sha256": "8a185ed181bf3afa741f2e65dc611b3f46b400abc57bde0f31c85dd7a8cc3e56"
     },
     "SOURCE-PERMISSIONS.md": {
       "bytes": 1348,
       "sha256": "e6f07f5456cd0696d2b32a46549211c16b38bb8442796097e1410c13104a58db"
     },
     "VERIFICATION-RECORD.md": {
-      "bytes": 7900,
-      "sha256": "fd9561c0ce6bce9f27bf6231f429ed5cd9972d5150b247bb5f8bfb7ece627e79"
+      "bytes": 7914,
+      "sha256": "5ec0b426808d4b09393294a02569010c1beda15f27df501b881cf4f4e8f29082"
     },
     "checkers/check_full_record.py": {
       "bytes": 1996,

@@ -2,7 +2,7 @@
 
 ## Scope of the existing complete check
 
-On 2026-10-23 an independent certificate checker, written without reading the research-side implementation or its results, checked all 108 source instances. It enumerated all 300,119,040 compatible sequences for upper coverage and regenerated every candidate and lower witness cover. All 108 minima passed. This was a certificate verification with the claimed optima and certificates known, not a blind rediscovery of the optima. It used the shared ViennaRNA 2.7.2 thermodynamic backend. The internal record is retained by the laboratory at research input commit 2ceb0de04c6cd68cfba7671a960bf35eef31e1e2.
+On 2026-10-23 a separately written certificate checker, developed without reading the research-side implementation or its check results, checked all 108 source instances. It enumerated all 300,119,040 compatible sequences for upper coverage and regenerated every candidate and lower witness cover. All 108 minima passed. This was a certificate verification with the claimed optima and certificates known, not a blind rediscovery of the optima. It used the shared ViennaRNA 2.7.2 thermodynamic backend. The internal record is retained by the laboratory at research input commit 2ceb0de04c6cd68cfba7671a960bf35eef31e1e2.
 
 The research-side checks additionally used ViennaRNA 2.5.1 and a separate Python energy evaluator. Shared model assumptions and parameter tables mean these are not three completely independent proofs. The software and its link to physical RNA are not formally verified.
 
