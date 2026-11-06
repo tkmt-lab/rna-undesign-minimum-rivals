@@ -73,7 +73,7 @@ The input is [`data/motifs_maxlen14_no_external/results.uniq.csv`](https://raw.g
 python -B tools/fetch_source.py --from-file work/source/results.uniq.csv
 ```
 
-Substitute the path to your copy for `work/source/results.uniq.csv`. The checker verifies the CSV digest, each row's motif digest and the exact 108 selected row IDs. A motif digest hashes the exact decoded `Motif` field encoded as UTF-8, without stripping, normalization or an added newline. Stored rivals retain compressed `(*)` boundaries; lower witness sequences use the expanded coordinates with fixed AAA.
+Substitute the path to your copy for `work/source/results.uniq.csv`. The checker verifies the CSV digest, each row's motif digest and the exact 108 selected row IDs. A motif digest hashes the exact decoded `Motif` field encoded as UTF-8, without stripping, normalization or an added newline. Stored rivals use source motif notation with `(*)` boundaries; the candidate grammar above replaces each boundary with one atomic `*`. Lower witness sequences use the expanded coordinates with fixed AAA.
 
 The default smoke check regenerates the candidate grammar and checks all candidate/sequence counts and **all 108 lower bounds**, then exhaustively checks upper coverage for m0081 (k=4), m0335 (k=2) and m1780 (k=1): 539,136 sequences. It took about 6 seconds on the assembly machine; timings vary. JSON results go to ignored `work/checks/`.
 

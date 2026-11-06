@@ -30,16 +30,16 @@
       "sha256": "aef72f226321e4017157e51c9f952e976f390fbb752e03eaf290267ae8edfc39"
     },
     "README.md": {
-      "bytes": 12449,
-      "sha256": "8a185ed181bf3afa741f2e65dc611b3f46b400abc57bde0f31c85dd7a8cc3e56"
+      "bytes": 12534,
+      "sha256": "66352c836e90089e2469dcf323fe7c236d8bb87a659f20cc7d64456d78d9392b"
     },
     "SOURCE-PERMISSIONS.md": {
       "bytes": 1348,
       "sha256": "e6f07f5456cd0696d2b32a46549211c16b38bb8442796097e1410c13104a58db"
     },
     "VERIFICATION-RECORD.md": {
-      "bytes": 7914,
-      "sha256": "5ec0b426808d4b09393294a02569010c1beda15f27df501b881cf4f4e8f29082"
+      "bytes": 7936,
+      "sha256": "1c792b5ef3e442c9a161b9f63f349e689236b1ad592ca50b22ab46cf6ef669b8"
     },
     "checkers/check_full_record.py": {
       "bytes": 1996,
