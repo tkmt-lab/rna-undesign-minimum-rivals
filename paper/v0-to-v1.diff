@@ -1,5 +1,5 @@
---- report-B-v0-en.tex	2026-10-28 16:03:40.163610179 +0900
-+++ report-B-v1-en.tex	2026-11-05 14:34:04.997679906 +0900
+--- paper/report-B-v0-en.tex	2026-11-05 23:29:32.747354297 +0000
++++ paper/report-B-v1-en.tex	2026-11-05 23:29:32.747509506 +0000
 @@ -9,11 +9,11 @@
  \setlength{\parskip}{5pt}
  \title{Minimum rival covers for 108 fixed\\RNA-Undesign motif instances}

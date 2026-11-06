@@ -1,6 +1,6 @@
 {
   "cff-version": "1.2.0",
-  "message": "Cite this draft and the original RNA-Undesign papers and data.",
+  "message": "Cite this package and the original RNA-Undesign papers and data.",
   "title": "Minimum rival covers for 108 RNA-Undesign motifs",
   "type": "dataset",
   "version": "1.0.0",
@@ -88,5 +88,7 @@
         }
       ]
     }
-  ]
+  ],
+  "date-released": "2026-11-11",
+  "repository-code": "https://github.com/tkmt-lab/rna-undesign-minimum-rivals"
 }

@@ -1,5 +1,23 @@
 # Minimum rival covers for 108 RNA-Undesign motifs
 
+Package **v1.0.0 — 2026-11-11**. Repository: https://github.com/tkmt-lab/rna-undesign-minimum-rivals
+
+## First check
+
+Requires Python 3.11 or later. From the repository root:
+
+```sh
+python3 -m venv .venv
+. .venv/bin/activate
+python -m pip install -r requirements.txt
+python -B tools/manifest.py
+python -B tools/fetch_source.py
+python -B checkers/verify.py
+```
+
+Expected: `status: PASS`, 108 lower bounds and 3 upper cases covering 539,136 sequences. This smoke check does not recalculate every upper cover.
+
+
 For 108 fixed motif instances, this package records the smallest number of rival structures needed to prevent the target from being the unique minimum-energy structure for every compatible sequence. The minima range from one to six. Their sum over the 108 rows is 310; this is not a set of 310 distinct structures covering every motif at once.
 
 The source instances are the 108 data rows with `N_Rival >= 2` in the 1,805-row `results.uniq.csv` of [RNA-Undesign](https://github.com/shanry/RNA-Undesign/tree/8a8de22). The original CSV and its motif strings are **not bundled**. Users retrieve the pinned input separately. Row numbers count data rows from one, excluding the header.
@@ -52,7 +70,7 @@ A complete run took about 55 minutes in one process on the assembly machine (App
 - `data/results.csv`: row IDs, counts, minima and motif digests.
 - `data/certificates.json`: laboratory-computed rivals and witness sequences, with the same row IDs and digests. See [data/README.md](data/README.md) for encodings.
 - `checkers/`: candidate grammar, integer-energy adapter and certificate checks. No search code is imported.
-- `paper/report-B-v1.1-en.pdf` and TeX: short mathematical report, Version 1.1 (current). Versions 0 and 1 and the exact diffs `paper/v0-to-v1.diff` and `paper/v1-to-v1.1.diff` are kept.
+- `paper/report-B-v1.1-en.pdf` and TeX: short mathematical report, Version 1.1 (current). Versions 0 and 1 are historical reports; the exact diffs `paper/v0-to-v1.diff` and `paper/v1-to-v1.1.diff` are kept.
 - `validation/full-check.json`, `validation/full-check-meta.json`: output of one complete `--full` run of this checker on these files, with the SHA-256 of every input file. `checkers/check_full_record.py` confirms that the record covers all 108 rows and 300,119,040 sequences and that the files have not changed since.
 - `VERIFICATION-RECORD.md`: previous independent checks and the scope of this package's assembly checks.
 - `SOURCE-PERMISSIONS.md`: source-data permission findings and the non-bundling decision.
@@ -69,4 +87,4 @@ The included row IDs, minima, rival structures, witness sequences, counts and mo
 
 The laboratory-authored code is Apache-2.0. The report and laboratory-authored result material are offered under CC-BY-4.0 to the extent of the laboratory's rights; these terms do not grant rights in third-party source material. See `LICENSE` and `licenses/`. Cite this package and the original work using `CITATION.cff`.
 
-Tatsuhiko Takimoto is responsible for this report. AI systems assisted with the calculations, certificate checks, literature comparison, code and writing; the verification record distinguishes their roles and dependencies. This is a local pre-publication draft; no release DOI has been assigned.
+Tatsuhiko Takimoto is responsible for this report. AI systems assisted with the calculations, certificate checks, literature comparison, code and writing; the verification record distinguishes their roles and dependencies. This package accompanies the report; see the repository page for archive and citation links.
