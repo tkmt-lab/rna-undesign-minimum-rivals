@@ -11,7 +11,7 @@
     },
     ".zenodo.json": {
       "bytes": 965,
-      "sha256": "1536eccdf6938765a9efb78592b4f0c4c33b98757407727848e75c6be888bfee"
+      "sha256": "82ff9fe41c117dd62944bd5a9607a4dff38dc84fb9069dc30c7024aef952b317"
     },
     "AGENTS.md": {
       "bytes": 1124,
@@ -19,11 +19,11 @@
     },
     "CHANGELOG.md": {
       "bytes": 291,
-      "sha256": "0127e8156608686bc0d19297e46db1886c1d120f3da71a2a2426525c2100a83c"
+      "sha256": "0ddf4d9457cb398e497ba8e43d12aefc259446efef9307381bb8597a96ac7e37"
     },
     "CITATION.cff": {
       "bytes": 2348,
-      "sha256": "e3b86389db74f2c8940844a3433d53e6240159da545848a9aaf0ab02349b8219"
+      "sha256": "bae949bb16eeb773040443da0eb0526f16b0723c4f4eb8337e4096d376ace777"
     },
     "LICENSE": {
       "bytes": 335,
@@ -31,7 +31,7 @@
     },
     "README.md": {
       "bytes": 12534,
-      "sha256": "66352c836e90089e2469dcf323fe7c236d8bb87a659f20cc7d64456d78d9392b"
+      "sha256": "aaebe59d180b23de4046d278d620c90517e492a03b610f9246d03d6d442c9b88"
     },
     "SOURCE-PERMISSIONS.md": {
       "bytes": 1348,
